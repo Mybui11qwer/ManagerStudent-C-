@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Tên trường</title>
+    <link rel="stylesheet" href="~/Content/Layout/Admin.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Quản trị viên</h2>
+        <ul>
+            <li><a href="~/Admin/Dashboard">Dashboard</a></li>
+            <li>
+                <a>Người dùng</a>
+                <ul class="sub-menu">
+                    <li><a href="~/Admin/ManagerStudent">Danh sách sinh viên</a></li>
+                    <li><a href="~/Admin/ManagerAccountAdmin">Danh sách giảng viên</a></li>
+                    <li><a href="~/Admin/AddNewStudent">Thêm sinh viên mới</a></li>
+                    <li><a href="#">Thêm giảng viên mới</a></li>
+                    <li><a href="#">Thêm nhân viên Admin mới</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Khoa</a>
+                <ul class="sub-menu">
+                    <li><a href="~/Admin/ManagerProduct">Danh sách các khoa</a></li>
+                    <li><a href="~/Admin/AddNewProduct">Thêm khoa mới</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Lớp học phần</a>
+                <ul class="sub-menu">
+                    <li><a href="~/Admin/ManagerCategory">Danh sách lớp học phần</a></li>
+                    <li><a href="~/Admin/AddNewCategory">Thêm lớp học phần</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Chào mừng đến với trang quản trị</h1>
+            <div class="user-info">
+                <span>Xin chào, @Session["MaAd" ?? "Admin hả"]</span>
+                <a href="~/Account/Logout" class="logout">LogOut</a>
+            </div>
+        </header>
+        @RenderBody()
+    </div>
+</body>
+</html>

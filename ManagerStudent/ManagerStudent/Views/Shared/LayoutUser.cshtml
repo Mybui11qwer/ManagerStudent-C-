@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Tên trường</title>
+    <link rel="icon" href="/Image/Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.webp">
+    <link rel="stylesheet" href="~/Content/UserPage/Header-Footer.css">
+    <link rel="stylesheet" href="~/Content/UserPage/Function-design.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Image/Logo-Portal.png" alt="Huflit University Logo">
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="~/Home/Index">Trang chủ</a></li>
+            <li><a href="#">Thanh toán học phí</a></li>
+            <li>
+                @if (Session["Email"] != null)
+                {
+                    <a href="~/Home/Information">@Session["HoTen"]</a>
+                }
+                @if (Session["Email"] == null)
+                {
+                    <a href="~/Account/Login" id="login-link">
+                        Login
+                    </a>
+                }
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="sidebar">
+            <h3>Chức năng</h3>
+            <h4>Trang cá nhân</h4>
+            <div class="private">
+                <table class="profile">
+                    <tr>
+                        <td><a href="~/Home/Information">Thông tin cá nhân</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="~/Home/Notification">Thông báo</a></td>
+                    </tr>
+                    <tr>
+                    <td><a href="~/Home/Index">Hướng dẫn sử dụng</a></td>
+                    </tr>
+                </table>
+            </div>
+            <h4>Tra cứu thông tin</h4>
+            <div class="private">
+                <table class="check-info">
+                    <tr>
+                        <td><a href="~/Home/ProgramEdu">Chương trình đào tạo</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="~/Home/Schedule">Lịch học</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="~/Home/ExamSchedule">Lịch thi</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Quyết định sinh viên</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Kết quả học tập</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Kết quả rèn luyện</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Tài chính sinh viên</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Xem chi tiết hoá đơn</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Xem kết quả đăng ký học phần</a></td>
+                    </tr>
+                </table>
+            </div>
+            <h4>Chức năng trực tuyến</h4>
+            <div class="private">
+                <table class="function-online">
+                    <tr>
+                        <td><a href="#">Đăng ký học phần</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Đánh giá điểm rèn luyện</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Thủ tục trực tuyến</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Xin bảng điểm</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Liên hệ - góp ý (...)</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        @RenderBody()
+    </main>
+    <footer>
+        <h1 style="text-align: center;">Huflit Hello world</h1>
+    </footer>
+</body>
+</html>
+
