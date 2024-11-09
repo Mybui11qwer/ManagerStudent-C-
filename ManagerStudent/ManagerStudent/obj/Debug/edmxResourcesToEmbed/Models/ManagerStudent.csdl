@@ -28,7 +28,7 @@
     <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="GioiTinh" Type="Boolean" />
     <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
     <Property Name="ChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
@@ -52,7 +52,7 @@
     <Key>
       <PropertyRef Name="MaKH" />
     </Key>
-    <Property Name="MaKH" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenKH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SV_KH" FromRole="KHOAHOC" ToRole="SINHVIEN" />
   </EntityType>
@@ -66,7 +66,7 @@
     <Property Name="Siso" Type="Int32" />
     <Property Name="HK" Type="Int32" />
     <Property Name="MaGV" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-    <Property Name="MaMH" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MaMH" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Diems" Relationship="Self.FK_DK_LHP" FromRole="LOPHOCPHAN" ToRole="Diem" />
     <NavigationProperty Name="GIANGVIEN" Relationship="Self.FK_LHP_GV" FromRole="LOPHOCPHAN" ToRole="GIANGVIEN" />
     <NavigationProperty Name="MONHOC" Relationship="Self.FK_LHP_MH" FromRole="LOPHOCPHAN" ToRole="MONHOC" />
@@ -75,7 +75,7 @@
     <Key>
       <PropertyRef Name="MaMH" />
     </Key>
-    <Property Name="MaMH" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoTinChi" Type="Int32" />
     <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
@@ -97,9 +97,8 @@
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-    <Property Name="MaKH" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-    <Property Name="ID_Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="Role" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MaKH" Type="Int32" Nullable="false" />
+    <Property Name="ID_Status" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Diems" Relationship="Self.FK_DK_SV" FromRole="SINHVIEN" ToRole="Diem" />
     <NavigationProperty Name="KHOA" Relationship="Self.FK_SV_K" FromRole="SINHVIEN" ToRole="KHOA" />
     <NavigationProperty Name="KHOAHOC" Relationship="Self.FK_SV_KH" FromRole="SINHVIEN" ToRole="KHOAHOC" />
@@ -109,7 +108,7 @@
     <Key>
       <PropertyRef Name="ID_Status" />
     </Key>
-    <Property Name="ID_Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ID_Status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TinhTrang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SV_TT" FromRole="TINHTRANGHOC" ToRole="SINHVIEN" />
   </EntityType>
@@ -186,7 +185,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SV_KH">
-    <End Role="KHOAHOC" Type="Self.KHOAHOC" Multiplicity="0..1" />
+    <End Role="KHOAHOC" Type="Self.KHOAHOC" Multiplicity="1" />
     <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="KHOAHOC">
@@ -198,7 +197,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_LHP_MH">
-    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="0..1" />
+    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
     <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="MONHOC">
@@ -210,7 +209,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SV_TT">
-    <End Role="TINHTRANGHOC" Type="Self.TINHTRANGHOC" Multiplicity="0..1" />
+    <End Role="TINHTRANGHOC" Type="Self.TINHTRANGHOC" Multiplicity="1" />
     <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TINHTRANGHOC">

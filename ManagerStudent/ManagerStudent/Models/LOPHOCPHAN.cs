@@ -26,7 +26,7 @@ namespace ManagerStudent.Models
         public Nullable<int> Siso { get; set; }
         public Nullable<int> HK { get; set; }
         public string MaGV { get; set; }
-        public string MaMH { get; set; }
+        public int MaMH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diems { get; set; }

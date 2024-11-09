@@ -38,7 +38,6 @@ namespace ManagerStudent.Controllers
                     Session["MaKhoa"] = studentCheck.MaKhoa;
                     Session["MaKH"] = studentCheck.MaKH;
                     Session["ID_Status"] = studentCheck.ID_Status;
-                    Session["Role"] = studentCheck.Role;
                     return RedirectToAction("Index", "Home");
                 }
                 //Check Bảng Giảng Viên

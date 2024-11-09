@@ -20,7 +20,7 @@ namespace ManagerStudent.Models
             this.SINHVIENs = new HashSet<SINHVIEN>();
         }
     
-        public string MaKH { get; set; }
+        public int MaKH { get; set; }
         public string TenKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

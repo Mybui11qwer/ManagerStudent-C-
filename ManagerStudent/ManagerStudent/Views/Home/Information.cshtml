@@ -1,4 +1,4 @@
-﻿
+﻿@model ManagerStudent.Models.SINHVIEN
 @{
     ViewBag.Title = "Information";
     Layout = "~/Views/Shared/LayoutUser.cshtml";
@@ -17,7 +17,7 @@
                 <th colspan="2" class="row-col-12">Thông tin liên lạc</th>
             </tr>
             <tr>
-                <td colspan="2" class="row-col-12">Khóa học:</td>
+                <td colspan="2" class="row-col-12">Khóa học: <b>@Model.KHOAHOC.TenKH</b></td>
                 <td colspan="2" class="row-col-12">Dân tộc:</td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@
                 <td colspan="4">Cố vấn học tập:</td>
             </tr>
             <tr>
-                <td class="row-col-21">Tình trạng học:<b>Còn học</b></td>
+                <td class="row-col-21">Tình trạng học:<b>@Model.TINHTRANGHOC.TinhTrang</b></td>
                 <td colspan="4">Liên hệ cố vấn học tập:</td>
             </tr>
             <tr>

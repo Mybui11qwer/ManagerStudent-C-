@@ -20,7 +20,7 @@ namespace ManagerStudent.Models
             this.LOPHOCPHANs = new HashSet<LOPHOCPHAN>();
         }
     
-        public string MaMH { get; set; }
+        public int MaMH { get; set; }
         public string TenMH { get; set; }
         public Nullable<int> SoTinChi { get; set; }
         public string MaKhoa { get; set; }

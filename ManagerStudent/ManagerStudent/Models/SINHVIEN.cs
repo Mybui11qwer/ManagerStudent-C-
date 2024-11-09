@@ -31,9 +31,8 @@ namespace ManagerStudent.Models
         public Nullable<System.DateTime> NgaySinh { get; set; }
         public string MatKhau { get; set; }
         public string MaKhoa { get; set; }
-        public string MaKH { get; set; }
-        public string ID_Status { get; set; }
-        public string Role { get; set; }
+        public int MaKH { get; set; }
+        public int ID_Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diems { get; set; }
