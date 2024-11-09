@@ -30,7 +30,12 @@ namespace ManagerStudent.Controllers
         }
         public ActionResult ProgramEdu()
         {
-            return View();
+            var MSSV = Session["MaSV"];
+            var checkUserProgram = database.SINHVIENs
+                .Include(s => s.KHOAHOC)
+                .Include(s => s.KHOA).Include(k => k.KHOA.MONHOCs)
+                .FirstOrDefault(s => s.MaSV == MSSV);
+            return View(checkUserProgram);
         }
         public ActionResult Schedule()
         {

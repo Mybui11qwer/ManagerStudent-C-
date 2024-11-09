@@ -317,6 +317,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\customer-SV.png" />
+    <Content Include="Image\Logo\icon-microsoft.png" />
+    <Content Include="Image\Logo\Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.png" />
+    <Content Include="Image\Logo\Logo-Portal.png" />
     <Content Include="Models\ManagerStudent.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManagerStudent.edmx</DependentUpon>

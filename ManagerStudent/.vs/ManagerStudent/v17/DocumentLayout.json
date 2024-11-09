@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\KDPM_2024\\ManagerStudent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\home\\programedu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\programedu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\models\\lophocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\models\\lophocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\models\\monhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\models\\monhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\models\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\models\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\views\\home\\information.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\information.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ManagerStudent\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwC8AAAA1AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "KHOAHOC.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\KHOAHOC.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Models\\KHOAHOC.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\KHOAHOC.cs",
+              "RelativeToolTip": "ManagerStudent\\Models\\KHOAHOC.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T13:51:18.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ManagerStudent\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwA8AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T13:08:25.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-09T12:23:43.895Z",
+              "WhenOpened": "2024-11-09T18:32:20.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Information.cshtml",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Information.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Information.cshtml",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Information.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Home\\Information.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABWAAAAAAAAAA==",
+              "Title": "LOPHOCPHAN.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\LOPHOCPHAN.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Models\\LOPHOCPHAN.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\LOPHOCPHAN.cs",
+              "RelativeToolTip": "ManagerStudent\\Models\\LOPHOCPHAN.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:32:09.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ManagerStudent\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-09T12:21:40.777Z",
+              "WhenOpened": "2024-11-09T18:12:45.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProgramEdu.cshtml",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "RelativeToolTip": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-09T18:09:15.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SINHVIEN.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\SINHVIEN.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Models\\SINHVIEN.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\SINHVIEN.cs",
+              "RelativeToolTip": "ManagerStudent\\Models\\SINHVIEN.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:03:55.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "KHOA.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\KHOA.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Models\\KHOA.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\KHOA.cs",
+              "RelativeToolTip": "ManagerStudent\\Models\\KHOA.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T18:00:20.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MONHOC.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\MONHOC.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Models\\MONHOC.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Models\\MONHOC.cs",
+              "RelativeToolTip": "ManagerStudent\\Models\\MONHOC.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T17:56:46.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ManagerStudent\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwCMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T13:08:25.758Z",
               "EditorCaption": ""
             }
           ]

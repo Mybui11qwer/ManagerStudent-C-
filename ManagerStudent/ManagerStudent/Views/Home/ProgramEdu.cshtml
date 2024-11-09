@@ -1,4 +1,4 @@
-﻿
+﻿@model ManagerStudent.Models.SINHVIEN
 @{
     ViewBag.Title = "ProgramEdu";
     Layout = "~/Views/Shared/LayoutUser.cshtml";
@@ -10,7 +10,7 @@
     <div class="container">
         <!-- Box displaying 'Công nghệ phần mềm' -->
         <div class="program-title">
-            Ngành Học ???
+            <b>@Model.KHOA.TenKhoa</b>
         </div>
 
         <!-- Table for Chương trình đào tạo -->
@@ -18,7 +18,7 @@
         <table>
             <thead>
                 <tr>
-                    <th colspan="10">Học Kỳ 1</th>
+                    <th colspan="10">Học Kỳ @Model.</th>
                 </tr>
                 <tr>
                     <th>TT</th>
@@ -34,18 +34,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mã số học phần</td>
-                    <td>Tên môn</td>
-                    <td>số tín chỉ</td>
-                    <td>Số tiết</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Tên khoa</td>
-                </tr>
+                @foreach (var Monhoc in Model.KHOA.MONHOCs)
+                {
+                    <tr>
+                        <td>1</td>
+                        <td>@Monhoc.MaMH</td>
+                        <td>@Monhoc.TenMH</td>
+                        <td>@Monhoc.SoTinChi</td>
+                        <td>Số tiết</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>@Monhoc.KHOA.TenKhoa</td>
+                    </tr>
+                }
                 <tr>
                     <td>2</td>
                     <td></td>
