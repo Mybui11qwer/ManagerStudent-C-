@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b858580334444ac6b44ef5affe5dbe04" Name="Diagram1">
-        <EntityTypeShape EntityType="ManagerStudentModel.ADMIN_ACCOUNT" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.Diem" Width="1.5" PointX="10.25" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.GIANGVIEN" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.KHOA" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.KHOAHOC" Width="1.5" PointX="5.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.LOPHOCPHAN" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.MONHOC" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.SINHVIEN" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerStudentModel.TINHTRANGHOC" Width="1.5" PointX="5.75" PointY="9.5" IsExpanded="true" />
+      <Diagram DiagramId="694672bbbfdd4b4282500833c70c5133" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagerStudentModel.ADMIN_ACCOUNT" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.Diem" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.GIANGVIEN" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.KHOA" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.KHOAHOC" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.LOPHOCPHAN" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.MONHOC" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.SINHVIEN" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerStudentModel.TINHTRANGHOC" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
         <AssociationConnector Association="ManagerStudentModel.FK_DK_LHP" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerStudentModel.FK_DK_SV" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerStudentModel.FK_GV_K" ManuallyRouted="false" />
@@ -22,6 +22,7 @@
         <AssociationConnector Association="ManagerStudentModel.FK_SV_K" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerStudentModel.FK_SV_KH" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerStudentModel.FK_LHP_MH" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerStudentModel.FK_MH_LHP" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerStudentModel.FK_SV_TT" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

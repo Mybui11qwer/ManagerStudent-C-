@@ -69,5 +69,14 @@ namespace ManagerStudent.Controllers
             }
             return View();
         }
+        public ActionResult Logout()
+        {
+            // Clear the session data
+            Session.Clear();
+            Session.Abandon();
+
+            // Redirect to the login page or home page
+            return RedirectToAction("Login", "Account");
+        }
     }
 }

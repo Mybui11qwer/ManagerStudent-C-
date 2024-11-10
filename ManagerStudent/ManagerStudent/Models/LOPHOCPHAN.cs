@@ -18,6 +18,7 @@ namespace ManagerStudent.Models
         public LOPHOCPHAN()
         {
             this.Diems = new HashSet<Diem>();
+            this.MONHOCs = new HashSet<MONHOC>();
         }
     
         public string MaLHP { get; set; }
@@ -27,10 +28,13 @@ namespace ManagerStudent.Models
         public Nullable<int> HK { get; set; }
         public string MaGV { get; set; }
         public int MaMH { get; set; }
+        public Nullable<int> NamHoc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diems { get; set; }
         public virtual GIANGVIEN GIANGVIEN { get; set; }
         public virtual MONHOC MONHOC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MONHOC> MONHOCs { get; set; }
     }
 }

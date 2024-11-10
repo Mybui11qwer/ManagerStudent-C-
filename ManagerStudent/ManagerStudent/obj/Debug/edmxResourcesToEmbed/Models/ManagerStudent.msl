@@ -63,6 +63,7 @@
           <ScalarProperty Name="HK" ColumnName="HK" />
           <ScalarProperty Name="MaGV" ColumnName="MaGV" />
           <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,6 +74,7 @@
           <ScalarProperty Name="TenMH" ColumnName="TenMH" />
           <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
           <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="MaLHP" ColumnName="MaLHP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

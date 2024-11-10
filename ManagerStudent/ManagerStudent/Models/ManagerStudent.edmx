@@ -64,6 +64,7 @@
           <Property Name="HK" Type="int" />
           <Property Name="MaGV" Type="char" MaxLength="4" />
           <Property Name="MaMH" Type="int" Nullable="false" />
+          <Property Name="NamHoc" Type="int" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -73,6 +74,7 @@
           <Property Name="TenMH" Type="nvarchar" MaxLength="50" />
           <Property Name="SoTinChi" Type="int" />
           <Property Name="MaKhoa" Type="char" MaxLength="4" />
+          <Property Name="MaLHP" Type="char" MaxLength="4" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -171,6 +173,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MH_LHP">
+          <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="0..1" />
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOPHOCPHAN">
+              <PropertyRef Name="MaLHP" />
+            </Principal>
+            <Dependent Role="MONHOC">
+              <PropertyRef Name="MaLHP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SV_K">
           <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
@@ -239,6 +253,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_MH_K" Association="Self.FK_MH_K">
             <End Role="KHOA" EntitySet="KHOA" />
+            <End Role="MONHOC" EntitySet="MONHOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MH_LHP" Association="Self.FK_MH_LHP">
+            <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
             <End Role="MONHOC" EntitySet="MONHOC" />
           </AssociationSet>
           <AssociationSet Name="FK_SV_K" Association="Self.FK_SV_K">
@@ -326,9 +344,11 @@
           <Property Name="HK" Type="Int32" />
           <Property Name="MaGV" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
           <Property Name="MaMH" Type="Int32" Nullable="false" />
+          <Property Name="NamHoc" Type="Int32" />
           <NavigationProperty Name="Diems" Relationship="Self.FK_DK_LHP" FromRole="LOPHOCPHAN" ToRole="Diem" />
           <NavigationProperty Name="GIANGVIEN" Relationship="Self.FK_LHP_GV" FromRole="LOPHOCPHAN" ToRole="GIANGVIEN" />
           <NavigationProperty Name="MONHOC" Relationship="Self.FK_LHP_MH" FromRole="LOPHOCPHAN" ToRole="MONHOC" />
+          <NavigationProperty Name="MONHOCs" Relationship="Self.FK_MH_LHP" FromRole="LOPHOCPHAN" ToRole="MONHOC" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -338,8 +358,10 @@
           <Property Name="TenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SoTinChi" Type="Int32" />
           <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MaLHP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
           <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
+          <NavigationProperty Name="LOPHOCPHAN" Relationship="Self.FK_MH_LHP" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -467,6 +489,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MH_LHP">
+          <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="0..1" />
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOPHOCPHAN">
+              <PropertyRef Name="MaLHP" />
+            </Principal>
+            <Dependent Role="MONHOC">
+              <PropertyRef Name="MaLHP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SV_TT">
           <End Role="TINHTRANGHOC" Type="Self.TINHTRANGHOC" Multiplicity="1" />
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
@@ -520,6 +554,10 @@
           <AssociationSet Name="FK_LHP_MH" Association="Self.FK_LHP_MH">
             <End Role="MONHOC" EntitySet="MONHOCs" />
             <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MH_LHP" Association="Self.FK_MH_LHP">
+            <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHANs" />
+            <End Role="MONHOC" EntitySet="MONHOCs" />
           </AssociationSet>
           <AssociationSet Name="FK_SV_TT" Association="Self.FK_SV_TT">
             <End Role="TINHTRANGHOC" EntitySet="TINHTRANGHOCs" />
@@ -594,6 +632,7 @@
                 <ScalarProperty Name="HK" ColumnName="HK" />
                 <ScalarProperty Name="MaGV" ColumnName="MaGV" />
                 <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+                <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -604,6 +643,7 @@
                 <ScalarProperty Name="TenMH" ColumnName="TenMH" />
                 <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
                 <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+                <ScalarProperty Name="MaLHP" ColumnName="MaLHP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

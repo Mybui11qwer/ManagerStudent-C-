@@ -59,6 +59,7 @@
     <Property Name="HK" Type="int" />
     <Property Name="MaGV" Type="char" MaxLength="4" />
     <Property Name="MaMH" Type="int" Nullable="false" />
+    <Property Name="NamHoc" Type="int" />
   </EntityType>
   <EntityType Name="MONHOC">
     <Key>
@@ -68,6 +69,7 @@
     <Property Name="TenMH" Type="nvarchar" MaxLength="50" />
     <Property Name="SoTinChi" Type="int" />
     <Property Name="MaKhoa" Type="char" MaxLength="4" />
+    <Property Name="MaLHP" Type="char" MaxLength="4" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
@@ -166,6 +168,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_MH_LHP">
+    <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="0..1" />
+    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOPHOCPHAN">
+        <PropertyRef Name="MaLHP" />
+      </Principal>
+      <Dependent Role="MONHOC">
+        <PropertyRef Name="MaLHP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SV_K">
     <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
     <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
@@ -234,6 +248,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_MH_K" Association="Self.FK_MH_K">
       <End Role="KHOA" EntitySet="KHOA" />
+      <End Role="MONHOC" EntitySet="MONHOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MH_LHP" Association="Self.FK_MH_LHP">
+      <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
       <End Role="MONHOC" EntitySet="MONHOC" />
     </AssociationSet>
     <AssociationSet Name="FK_SV_K" Association="Self.FK_SV_K">

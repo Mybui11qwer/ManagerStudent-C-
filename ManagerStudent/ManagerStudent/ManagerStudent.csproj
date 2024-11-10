@@ -306,7 +306,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Layout\Admin.css" />
-    <Content Include="Content\UserPage\Function-design.css" />
+    <Content Include="Content\UserPage\Function-header.css" />
     <Content Include="Content\UserPage\Function\Function-design-index.css" />
     <Content Include="Content\UserPage\Function\index.css" />
     <Content Include="Content\UserPage\Function\Information.css" />
@@ -318,6 +318,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\customer-SV.png" />
+    <Content Include="Image\icon-caret.png" />
     <Content Include="Image\Logo\icon-microsoft.png" />
     <Content Include="Image\Logo\Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.png" />
     <Content Include="Image\Logo\Logo-Portal.png" />

@@ -5,7 +5,7 @@
     <title>@ViewBag.Title - Tên trường</title>
     <link rel="icon" href="/Image/Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.webp">
     <link rel="stylesheet" href="~/Content/UserPage/Header-Footer.css">
-    <link rel="stylesheet" href="~/Content/UserPage/Function-design.css">
+    <link rel="stylesheet" href="~/Content/UserPage/Function-header.css">
     <link rel="icon" href="~/Image/Logo/Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.png" style="width: 32px; height: 32px;" />
 </head>
 <body>
@@ -21,7 +21,19 @@
             <li style="margin-left: auto;">
                 @if (Session["Email"] != null)
                 {
-                    <a href="~/Home/Information">@Session["MaSV"] | @Session["HoTen"]</a>
+                    <a onclick="toggleDropdown()" class="btndrop" style="cursor: pointer">@Session["MaSV"] | @Session["HoTen"]</a>
+                    <ul id="dropdownContent" class="dropdown-menu">
+                        <li>
+                            <a href="~/Home/Information">Thông tin</a>
+                        </li>
+                        <li>
+                            <a href="#">Đổi mật khẩu</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="@Url.RouteUrl(new { controller = "Account", action = "Logout" })">Thoát</a>
+                        </li>
+                    </ul>
                 }
                 @if (Session["Email"] == null)
                 {
@@ -42,7 +54,7 @@
                         <td><a href="~/Home/Information">Thông tin cá nhân</a></td>
                     </tr>
                     <tr>
-                        <td><a href="~/Home/Notification">Thông báo</a></td>
+                        <td><a href="~/Home/Notification">Thông báo <span>(..)</span></a></td>
                     </tr>
                     <tr>
                     <td><a href="~/Home/Index">Hướng dẫn sử dụng</a></td>
@@ -107,6 +119,29 @@
     <footer>
         <h1 style="text-align: center;">Huflit Hello world</h1>
     </footer>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        // Đóng dropdown nếu nhấn ra ngoài
+        window.onclick = function (event) {
+            if (!event.target.matches('.btndrop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
 

@@ -34,6 +34,7 @@ namespace ManagerStudent.Controllers
             var checkUserProgram = database.SINHVIENs
                 .Include(s => s.KHOAHOC)
                 .Include(s => s.KHOA).Include(k => k.KHOA.MONHOCs)
+                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
                 .FirstOrDefault(s => s.MaSV == MSSV);
             return View(checkUserProgram);
         }
