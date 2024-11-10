@@ -1,104 +1,9 @@
-﻿
+﻿@model ManagerStudent.Models.SINHVIEN
 @{
     ViewBag.Title = "Schedule";
     Layout = "~/Views/Shared/LayoutUser.cshtml";
 }
-<style>
-    .container-Sche {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .top-panel {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-        .top-panel label {
-            margin-right: 10px;
-        }
-
-        .top-panel select {
-            margin-right: 20px;
-        }
-
-    .content-Schedule thead .table_tr th {
-        border: 1px solid #bdccd6;
-        background-color: #012E67;
-        color: white;
-        padding: 10px;
-    }
-
-    .content-Schedule {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-        .content-Schedule tbody .table_tr td {
-            border: 1px solid #bdccd6;
-            padding: 10px;
-            text-align: center;
-        }
-
-    
-
-    .class-info {
-        text-align: left;
-    }
-
-        .class-info span {
-            display: block;
-        }
-
-    .class-title {
-        color: red;
-    }
-
-    .class-teacher {
-        color: blue;
-    }
-
-    select#year {
-        height: 34px;
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #555;
-        background-color: #fff;
-        background-image: none;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    select#semester {
-        height: 34px;
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #555;
-        background-color: #fff;
-        background-image: none;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    select#week {
-        height: 34px;
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #555;
-        background-color: #fff;
-        background-image: none;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    #tiet {
-        background-color: #d4e1e9;
-        color: #4c307b;
-    }
-</style>
+<link rel="stylesheet" href="~/Content/UserPage/Function/Schedule.css" />
 <section class="content">
     <h3>Lịch học</h3>
     <div class="container-Sche">
@@ -112,32 +17,17 @@
             </select>
             <label for="semester">Học kỳ:</label>
             <select id="semester">
-                <option value="1">Học kỳ 1</option>
-                <option value="2">Học kỳ 2</option>
-                <option value="3">Học kỳ 3</option>
+                @for (int hk = 1; hk <= 3; hk++)
+                {
+                    <option value="Học kỳ @hk">Học kỳ @hk</option>
+                }
             </select>
             <label for="week">Tuần:</label>
             <select id="week">
-                <option value="1">1</option>
-                <option value="1">2</option>
-                <option value="1">3</option>
-                <option value="1">4</option>
-                <option value="1">5</option>
-                <option value="1">6</option>
-                <option value="1">7</option>
-                <option value="1">8</option>
-                <option value="1">9</option>
-                <option value="1">10</option>
-                <option value="1">11</option>
-                <option value="1">12</option>
-                <option value="1">13</option>
-                <option value="1">14</option>
-                <option value="1">15</option>
-                <option value="1">16</option>
-                <option value="1">17</option>
-                <option value="1">18</option>
-                <option value="1">19</option>
-                <option value="1">20</option>
+                @for (int week = 1; week <= 20; week++)
+                {
+                    <option value="@week">@week</option>
+                }
             </select>
         </div>
         <table class="content-Schedule">
@@ -155,187 +45,33 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="table_tr">
-                    <td id="tiet">1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">1</td>
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">2</td>
-                    <td></td>
-                    <td class="class-info">
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">2</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">3</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">4</td>
-                    <td></td>
-                    <td class="class-info">
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">4</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">5</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">6</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">7</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">7</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">8</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">9</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">9</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">10</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">10</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">11</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">11</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">12</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">12</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">13</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">13</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">14</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">14</td>
-
-                </tr>
-                <tr class="table_tr">
-                    <td id="tiet">15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="tiet">15</td>
-
-                </tr>
+                @for (int tiet = 1; tiet <= 15; tiet++)  // 15 tiết học
+                {
+                    <tr class="table_tr">
+                        <td id="tiet">@tiet</td>
+                        @for (int day = 1; day <= 7; day++)  // Hiển thị 7 ngày trong tuần
+                        {
+                            <td>
+                                @foreach (var monhoc in Model.KHOA.MONHOCs)
+                                {
+                                    foreach (var lophocphan in monhoc.LOPHOCPHANs)
+                                    {
+                                        if (lophocphan.TietBD <= tiet && lophocphan.TietKT >= tiet && lophocphan.Thu == day.ToString())
+                                        {
+                                            <span class="class-title">@lophocphan.TenLHP</span><br />
+                                            <span>@monhoc.TenMH (@monhoc.MaMH)</span><br />
+                                            <span>LHP: @lophocphan.MaLHP</span><br />
+                                            <span>Số tiết: </span><br />
+                                            <span>Tiết: @lophocphan.TietBD - @lophocphan.TietKT</span><br />
+                                            <span class="class-teacher">GV: @lophocphan.MaGV</span>
+                                        }
+                                    }
+                                }
+                            </td>
+                        }
+                        <td id="tiet">@tiet</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

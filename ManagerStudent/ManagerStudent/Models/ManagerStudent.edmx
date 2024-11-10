@@ -65,6 +65,9 @@
           <Property Name="MaGV" Type="char" MaxLength="4" />
           <Property Name="MaMH" Type="int" Nullable="false" />
           <Property Name="NamHoc" Type="int" />
+          <Property Name="Thu" Type="char" MaxLength="1" />
+          <Property Name="TietBD" Type="int" />
+          <Property Name="TietKT" Type="int" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -345,6 +348,9 @@
           <Property Name="MaGV" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
           <Property Name="MaMH" Type="Int32" Nullable="false" />
           <Property Name="NamHoc" Type="Int32" />
+          <Property Name="Thu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TietBD" Type="Int32" />
+          <Property Name="TietKT" Type="Int32" />
           <NavigationProperty Name="Diems" Relationship="Self.FK_DK_LHP" FromRole="LOPHOCPHAN" ToRole="Diem" />
           <NavigationProperty Name="GIANGVIEN" Relationship="Self.FK_LHP_GV" FromRole="LOPHOCPHAN" ToRole="GIANGVIEN" />
           <NavigationProperty Name="MONHOC" Relationship="Self.FK_LHP_MH" FromRole="LOPHOCPHAN" ToRole="MONHOC" />
@@ -633,6 +639,9 @@
                 <ScalarProperty Name="MaGV" ColumnName="MaGV" />
                 <ScalarProperty Name="MaMH" ColumnName="MaMH" />
                 <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+                <ScalarProperty Name="Thu" ColumnName="Thu" />
+                <ScalarProperty Name="TietBD" ColumnName="TietBD" />
+                <ScalarProperty Name="TietKT" ColumnName="TietKT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

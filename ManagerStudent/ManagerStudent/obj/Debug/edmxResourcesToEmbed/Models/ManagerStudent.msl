@@ -64,6 +64,9 @@
           <ScalarProperty Name="MaGV" ColumnName="MaGV" />
           <ScalarProperty Name="MaMH" ColumnName="MaMH" />
           <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="Thu" ColumnName="Thu" />
+          <ScalarProperty Name="TietBD" ColumnName="TietBD" />
+          <ScalarProperty Name="TietKT" ColumnName="TietKT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

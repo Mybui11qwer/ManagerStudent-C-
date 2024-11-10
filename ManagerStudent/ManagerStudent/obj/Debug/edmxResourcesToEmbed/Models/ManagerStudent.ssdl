@@ -60,6 +60,9 @@
     <Property Name="MaGV" Type="char" MaxLength="4" />
     <Property Name="MaMH" Type="int" Nullable="false" />
     <Property Name="NamHoc" Type="int" />
+    <Property Name="Thu" Type="char" MaxLength="1" />
+    <Property Name="TietBD" Type="int" />
+    <Property Name="TietKT" Type="int" />
   </EntityType>
   <EntityType Name="MONHOC">
     <Key>

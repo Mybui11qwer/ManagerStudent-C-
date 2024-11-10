@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\KDPM_2024\\ManagerStudent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|D:\\KDPM_2024\\ManagerStudent\\managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\home\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\home\\programedu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\shared\\masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\shared\\masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\views\\shared\\layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\shared\\layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\content\\userpage\\function-header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\content\\userpage\\function-header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|d:\\kdpm_2024\\managerstudent\\managerstudent\\content\\userpage\\function\\schedule.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\content\\userpage\\function\\schedule.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,58 +30,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProgramEdu.cshtml",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-10T03:26:44.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MasterLayout.cshtml",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Shared\\MasterLayout.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Shared\\MasterLayout.cshtml",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Shared\\MasterLayout.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Shared\\MasterLayout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-10T03:17:11.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Function-header.css",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function-header.css",
-              "RelativeDocumentMoniker": "ManagerStudent\\Content\\UserPage\\Function-header.css",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function-header.css",
-              "RelativeToolTip": "ManagerStudent\\Content\\UserPage\\Function-header.css",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-10T02:29:17.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LayoutUser.cshtml",
-              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
-              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADgAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-10T02:22:00.331Z",
+              "Title": "Schedule.css",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function\\Schedule.css",
+              "RelativeDocumentMoniker": "ManagerStudent\\Content\\UserPage\\Function\\Schedule.css",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function\\Schedule.css",
+              "RelativeToolTip": "ManagerStudent\\Content\\UserPage\\Function\\Schedule.css",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwF0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-10T12:55:28.649Z",
               "EditorCaption": ""
             },
             {
@@ -96,20 +53,46 @@
               "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ManagerStudent\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-09T18:12:45.248Z",
+              "WhenOpened": "2024-11-10T12:38:27.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ProgramEdu.cshtml",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "RelativeToolTip": "ManagerStudent\\Views\\Home\\ProgramEdu.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T11:43:37.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Schedule.cshtml",
+              "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Schedule.cshtml",
+              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Schedule.cshtml",
+              "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Views\\Home\\Schedule.cshtml",
+              "RelativeToolTip": "ManagerStudent\\Views\\Home\\Schedule.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwD4AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T05:02:30.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\KDPM_2024\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
               "RelativeToolTip": "ManagerStudent\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAACQAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAawDIAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T13:08:25.758Z",
               "EditorCaption": ""

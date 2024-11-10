@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using ManagerStudent.Models;
 
 namespace ManagerStudent.Controllers
@@ -31,16 +32,25 @@ namespace ManagerStudent.Controllers
         public ActionResult ProgramEdu()
         {
             var MSSV = Session["MaSV"];
+            // Lấy thông tin sinh viên từ cơ sở dữ liệu
             var checkUserProgram = database.SINHVIENs
                 .Include(s => s.KHOAHOC)
-                .Include(s => s.KHOA).Include(k => k.KHOA.MONHOCs)
+                .Include(s => s.KHOA)
+                .Include(k => k.KHOA.MONHOCs)
                 .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
                 .FirstOrDefault(s => s.MaSV == MSSV);
             return View(checkUserProgram);
         }
         public ActionResult Schedule()
         {
-            return View();
+            var MSSV = Session["MaSV"];
+            var checkSchedule = database.SINHVIENs
+                .Include(kh => kh.KHOAHOC)
+                .Include(k => k.KHOA)
+                .Include(m => m.KHOA.MONHOCs)
+                .Include(lhp => lhp.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
+                .FirstOrDefault(s => s.MaSV == MSSV);
+            return View(checkSchedule);
         }
         public ActionResult ExamSchedule()
         {
