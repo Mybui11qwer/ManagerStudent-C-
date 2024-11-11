@@ -15,8 +15,10 @@
     </select>
     <select>
         <option>Khoa</option>
-        <option>Công nghệ thông tin</option>
-        <option>Quản trị kinh doanh</option>
+        @foreach(var khoa in Model.Select(s => s.KHOA))
+            {
+                <option>@khoa.TenKhoa</option>
+            }
     </select>
     <input type="search" placeholder="tìm kiếm" />
 </section>

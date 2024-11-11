@@ -1,4 +1,4 @@
-﻿@model List<ManagerStudent.Models.SINHVIEN>
+﻿@model ManagerStudent.Models.ViewSinhVienModel
 @{
     ViewBag.Title = "AddNewStudent";
     Layout = "~/Views/Shared/LayoutAdmin.cshtml";
@@ -7,53 +7,59 @@
 <section class="add-user-form">
     <form action="/Admin/AddNewStudent" method="POST">
         <label for="username">Mã sinh viên: </label>
-        <input type="text" id="mssv" name="#" required>
+        <input type="text" id="mssv" name="MaSV" placeholder="Nhập mã sinh viên ..dh.." required>
 
         <label for="username">Họ và tên: </label>
-        <input type="text" id="username" name="#" required>
+        <input type="text" id="username" name="HoTen" placeholder="Họ và tên sinh viên mới" required>
 
         <label for="username">Giới tính: </label>
-        <input type="number" id="gender" name="#" required>
+        <select name="GioiTinh">
+            <option>Chọn giới tính</option>
+            <option value="0">Nữ</option>
+            <option value="1">Nam</option>
+        </select>
 
         <label for="email">Email: </label>
         <input type="email" id="email" name="Email" required>
 
         <label for="phone">Số điện thoại: </label>
-        <input type="tel" id="phone" name="Phone" required>
+        <input type="tel" id="phone" name="SoDienThoai" required>
 
         <label for="address">Địa chỉ: </label>
-        <input type="text" id="address" name="Address" />
+        <input type="text" id="address" name="DiaChi" />
 
         <label for="address">CCCD: </label>
-        <input type="text" id="nk" name="#" />
+        <input type="text" id="cccd" name="CMND" />
 
         <label for="address">Ngày Sinh: </label>
-        <input type="date" id="date" name="#" />
+        <input type="date" id="date" name="NgaySinh" />
 
         <label for="address">Niên khóa: </label>
-        <input type="text" id="nk" name="#" />
+        <input type="text" id="nk" name="NienKhoa" />
 
         <label for="khoa">Khoa: </label>
-        <select>
-            @foreach(var khoa in Model.Select(s => s.KHOA).GroupBy(k => k.MaKhoa).Select(g => g.First()))
+        <select name="MaKhoa">
+            <option>Khoa của sinh viên</option>
+            @foreach(var khoa in Model.Khoas)
             {
-                <option>@khoa.TenKhoa</option>
+                <option value="@khoa.MaKhoa">@khoa.TenKhoa</option>
             }
         </select>
 
         <label for="khoahoc">Khóa học: </label>
-        <select>
-            @foreach (var khoahoc in Model.Select(k => k.KHOAHOC).GroupBy(k => k.MaKH).Select(g => g.First()))
+        <select name="MaKH">
+            <option>Khóa học của sinh viên</option>
+            @foreach(var khoahoc in Model.KhoaHocs)
             {
-                <option>@khoahoc.TenKH</option>
+                <option value="@khoahoc.MaKH">@khoahoc.TenKH</option>
             }
         </select>
 
         <label for="tinhtrang">Tình trạng học: </label>
-        <select>
-            @foreach (var tinhtrang in Model.Select(t => t.TINHTRANGHOC))
+        <select name="ID_Status">
+            @foreach(var tinhtrang in Model.TinhTrangHocs)
             {
-                <option>@tinhtrang.TinhTrang</option>
+                <option value="@tinhtrang.ID_Status">@tinhtrang.TinhTrang</option>
             }
         </select>
 

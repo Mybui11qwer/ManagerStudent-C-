@@ -14,20 +14,35 @@ namespace ManagerStudent.Controllers
         // GET: Admin
         public ActionResult Dashboard()
         {
+            var toltalStudents = database.SINHVIENs.Count();
+            var toltalTeachers = database.GIANGVIENs.Count();
+
+            ViewBag.toltalStudents = toltalStudents;
+            ViewBag.toltalTeachers = toltalTeachers;
+
             return View();
         }
         public ActionResult ManagerStudent()
         {
-            List<SINHVIEN> sINHVIENs = database.SINHVIENs.ToList();
+            List<SINHVIEN> sINHVIENs = database.SINHVIENs
+                .Include(s => s.KHOAHOC)
+                .Include(s => s.KHOA)
+                .Include(k => k.KHOA.MONHOCs)
+                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
+                .ToList();
             return View(sINHVIENs);
         }
         public ActionResult AddNewStudent()
         {
-            var sinhvien = database.SINHVIENs
-                .Include(s => s.KHOAHOC)
-                .Include(s => s.KHOA)
-                .Include(k => k.KHOA.MONHOCs)
-                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN)).ToList();
+            var sinhvien = new ViewSinhVienModel()
+            {
+                SinhViens = database.SINHVIENs.ToList(),
+                Khoas = database.KHOAs.ToList(),
+                KhoaHocs = database.KHOAHOCs.ToList(),
+                MonHocs = database.MONHOCs.ToList(),
+                LopHocPhans = database.LOPHOCPHANs.ToList(),
+                TinhTrangHocs = database.TINHTRANGHOCs.ToList()
+            };
             return View(sinhvien);
         }
         [HttpPost]
@@ -35,6 +50,7 @@ namespace ManagerStudent.Controllers
         {
             try
             {
+                sinhvien.MatKhau = "123";
                 database.SINHVIENs.Add(sinhvien);
                 database.SaveChanges();
                 return RedirectToAction("ManagerStudent");

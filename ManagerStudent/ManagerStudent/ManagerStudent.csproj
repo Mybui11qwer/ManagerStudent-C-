@@ -283,6 +283,7 @@
     <Compile Include="Models\TINHTRANGHOC.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewSinhVienModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
