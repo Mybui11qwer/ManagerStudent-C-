@@ -78,6 +78,8 @@
           <Property Name="SoTinChi" Type="int" />
           <Property Name="MaKhoa" Type="char" MaxLength="4" />
           <Property Name="MaLHP" Type="char" MaxLength="4" />
+          <Property Name="SoTinChiLyThuyet" Type="int" />
+          <Property Name="SoTinChiThucHanh" Type="int" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -365,6 +367,8 @@
           <Property Name="SoTinChi" Type="Int32" />
           <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
           <Property Name="MaLHP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="SoTinChiLyThuyet" Type="Int32" />
+          <Property Name="SoTinChiThucHanh" Type="Int32" />
           <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
           <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
           <NavigationProperty Name="LOPHOCPHAN" Relationship="Self.FK_MH_LHP" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
@@ -653,6 +657,8 @@
                 <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
                 <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
                 <ScalarProperty Name="MaLHP" ColumnName="MaLHP" />
+                <ScalarProperty Name="SoTinChiLyThuyet" ColumnName="SoTinChiLyThuyet" />
+                <ScalarProperty Name="SoTinChiThucHanh" ColumnName="SoTinChiThucHanh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

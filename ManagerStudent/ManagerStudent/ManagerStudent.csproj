@@ -305,7 +305,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\Layout\Admin.css" />
+    <Content Include="Content\Layout\AdminPage.css" />
     <Content Include="Content\UserPage\Function-header.css" />
     <Content Include="Content\UserPage\Function\Function-design-index.css" />
     <Content Include="Content\UserPage\Function\index.css" />

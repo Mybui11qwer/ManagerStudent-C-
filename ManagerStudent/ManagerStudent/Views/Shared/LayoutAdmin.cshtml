@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title - Tên trường</title>
-    <link rel="stylesheet" href="~/Content/Layout/Admin.css" />
+    <link rel="stylesheet" href="~/Content/Layout/AdminPage.css" />
     <link rel="icon" href="~/Image/Logo/Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.png" style="width: 32px; height: 32px;" />
 </head>
 <body>
@@ -12,27 +12,32 @@
         <ul>
             <li><a href="~/Admin/Dashboard">Dashboard</a></li>
             <li>
-                <a>Người dùng</a>
+                <a>Sinh Viên</a>
                 <ul class="sub-menu">
                     <li><a href="~/Admin/ManagerStudent">Danh sách sinh viên</a></li>
-                    <li><a href="~/Admin/ManagerAccountAdmin">Danh sách giảng viên</a></li>
                     <li><a href="~/Admin/AddNewStudent">Thêm sinh viên mới</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Giảng Viên</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Danh sách giảng viên</a></li>
                     <li><a href="#">Thêm giảng viên mới</a></li>
-                    <li><a href="#">Thêm nhân viên Admin mới</a></li>
                 </ul>
             </li>
             <li>
-                <a>Khoa</a>
+                <a>Nhân viên Admin</a>
                 <ul class="sub-menu">
-                    <li><a href="~/Admin/ManagerProduct">Danh sách các khoa</a></li>
-                    <li><a href="~/Admin/AddNewProduct">Thêm khoa mới</a></li>
+                    <li><a href="#">Danh sách Admin</a></li>
+                    <li><a href="#">Thêm Admin mới</a></li>
                 </ul>
             </li>
             <li>
-                <a>Lớp học phần</a>
+                <a>Quản lý chung</a>
                 <ul class="sub-menu">
-                    <li><a href="~/Admin/ManagerCategory">Danh sách lớp học phần</a></li>
-                    <li><a href="~/Admin/AddNewCategory">Thêm lớp học phần</a></li>
+                    <li><a href="#">Khoa</a></li>
+                    <li><a href="#">Lớp học phần</a></li>
+                    <li><a href="#">Tình trạng học</a></li>
                 </ul>
             </li>
         </ul>

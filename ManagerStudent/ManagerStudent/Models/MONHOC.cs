@@ -25,6 +25,8 @@ namespace ManagerStudent.Models
         public Nullable<int> SoTinChi { get; set; }
         public string MaKhoa { get; set; }
         public string MaLHP { get; set; }
+        public Nullable<int> SoTinChiLyThuyet { get; set; }
+        public Nullable<int> SoTinChiThucHanh { get; set; }
     
         public virtual KHOA KHOA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

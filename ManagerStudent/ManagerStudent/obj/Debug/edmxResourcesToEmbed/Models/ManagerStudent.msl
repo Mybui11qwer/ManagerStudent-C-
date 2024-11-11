@@ -78,6 +78,8 @@
           <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
           <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
           <ScalarProperty Name="MaLHP" ColumnName="MaLHP" />
+          <ScalarProperty Name="SoTinChiLyThuyet" ColumnName="SoTinChiLyThuyet" />
+          <ScalarProperty Name="SoTinChiThucHanh" ColumnName="SoTinChiThucHanh" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -23,7 +23,26 @@ namespace ManagerStudent.Controllers
         }
         public ActionResult AddNewStudent()
         {
-            return View();
+            var sinhvien = database.SINHVIENs
+                .Include(s => s.KHOAHOC)
+                .Include(s => s.KHOA)
+                .Include(k => k.KHOA.MONHOCs)
+                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN)).ToList();
+            return View(sinhvien);
+        }
+        [HttpPost]
+        public ActionResult AddNewStudent(SINHVIEN sinhvien)
+        {
+            try
+            {
+                database.SINHVIENs.Add(sinhvien);
+                database.SaveChanges();
+                return RedirectToAction("ManagerStudent");
+            }
+            catch
+            {
+                return View("AddNewStudent");
+            }
         }
     }
 }

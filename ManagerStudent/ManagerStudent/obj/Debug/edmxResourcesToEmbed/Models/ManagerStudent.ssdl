@@ -73,6 +73,8 @@
     <Property Name="SoTinChi" Type="int" />
     <Property Name="MaKhoa" Type="char" MaxLength="4" />
     <Property Name="MaLHP" Type="char" MaxLength="4" />
+    <Property Name="SoTinChiLyThuyet" Type="int" />
+    <Property Name="SoTinChiThucHanh" Type="int" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>

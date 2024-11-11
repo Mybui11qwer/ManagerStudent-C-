@@ -44,6 +44,10 @@
                     <th>Tiết</th>
                 </tr>
             </thead>
+            @{
+                // Dictionary to track if a cell has been merged for a specific day and period
+                var mergedCells = new Dictionary<(int tiet, int day), bool>();
+            }
             <tbody>
                 @for (int tiet = 1; tiet <= 15; tiet++)  // 15 tiết học
                 {
@@ -51,23 +55,38 @@
                         <td id="tiet">@tiet</td>
                         @for (int day = 1; day <= 7; day++)  // Hiển thị 7 ngày trong tuần
                         {
-                            <td>
-                                @foreach (var monhoc in Model.KHOA.MONHOCs)
+                            bool hasClass = false;
+
+                            foreach (var monhoc in Model.KHOA.MONHOCs)
+                            {
+                                foreach (var lophocphan in monhoc.LOPHOCPHANs)
                                 {
-                                    foreach (var lophocphan in monhoc.LOPHOCPHANs)
+                                    if (lophocphan.TietBD == tiet && lophocphan.Thu == day.ToString())
                                     {
-                                        if (lophocphan.TietBD <= tiet && lophocphan.TietKT >= tiet && lophocphan.Thu == day.ToString())
+                                        int rowSpan = (lophocphan.TietKT ?? 0) - (lophocphan.TietBD ?? 0) + 1; // Calculate the rowspan based on the class duration
+                                        hasClass = true;
+                                        int sotiet = (lophocphan.TietKT ?? 0) - (lophocphan.TietBD ?? 0) + 1;
+                                        for (int t = tiet; t <= lophocphan.TietKT; t++)
                                         {
+                                            mergedCells[(t, day)] = true;
+                                        }
+
+                                        <td rowspan="@rowSpan">
                                             <span class="class-title">@lophocphan.TenLHP</span><br />
                                             <span>@monhoc.TenMH (@monhoc.MaMH)</span><br />
                                             <span>LHP: @lophocphan.MaLHP</span><br />
-                                            <span>Số tiết: </span><br />
+                                            <span>Số tiết: @sotiet</span><br />
                                             <span>Tiết: @lophocphan.TietBD - @lophocphan.TietKT</span><br />
                                             <span class="class-teacher">GV: @lophocphan.MaGV</span>
-                                        }
+                                        </td>
                                     }
                                 }
-                            </td>
+                            }
+
+                            if (!hasClass && !mergedCells.ContainsKey((tiet, day)))
+                            {
+                                <td></td>
+                            }
                         }
                         <td id="tiet">@tiet</td>
                     </tr>

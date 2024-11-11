@@ -85,6 +85,8 @@
     <Property Name="SoTinChi" Type="Int32" />
     <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
     <Property Name="MaLHP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="SoTinChiLyThuyet" Type="Int32" />
+    <Property Name="SoTinChiThucHanh" Type="Int32" />
     <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
     <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
     <NavigationProperty Name="LOPHOCPHAN" Relationship="Self.FK_MH_LHP" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
