@@ -23,14 +23,14 @@
         @foreach (var monhoc in Model.KHOA.MONHOCs)
         {
             <table>
-                @foreach (var Lophocphan in monhoc.LOPHOCPHANs)
+                @foreach(var lophocphan in monhoc.LOPHOCPHANs)
                 {
-                    if (!displayedHK.Contains(Lophocphan.HK ?? 0))
+                    if (!displayedHK.Contains(lophocphan.HK ?? 0))
                     {
                         <!-- Display the semester header only once per unique Học Kỳ -->
                         <thead>
                             <tr>
-                                <th colspan="10">Học Kỳ: @Lophocphan.HK</th>
+                                <th colspan="10">Học Kỳ: @lophocphan.HK</th>
                             </tr>
                             <tr>
                                 <th>TT</th>
@@ -78,7 +78,7 @@
                         </tbody>
                         {
                             // Add the displayed semester to the HashSet
-                            displayedHK.Add(Lophocphan.HK ?? 0);
+                            displayedHK.Add(lophocphan.HK ?? 0);
                         }
                     }
                 }

@@ -36,8 +36,7 @@ namespace ManagerStudent.Controllers
             var checkUserProgram = database.SINHVIENs
                 .Include(s => s.KHOAHOC)
                 .Include(s => s.KHOA)
-                .Include(k => k.KHOA.MONHOCs)
-                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
+                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHANs))
                 .FirstOrDefault(s => s.MaSV == MSSV);
             return View(checkUserProgram);
         }
@@ -48,7 +47,7 @@ namespace ManagerStudent.Controllers
                 .Include(kh => kh.KHOAHOC)
                 .Include(k => k.KHOA)
                 .Include(m => m.KHOA.MONHOCs)
-                .Include(lhp => lhp.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
+                .Include(lhp => lhp.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHANs))
                 .FirstOrDefault(s => s.MaSV == MSSV);
             return View(checkSchedule);
         }

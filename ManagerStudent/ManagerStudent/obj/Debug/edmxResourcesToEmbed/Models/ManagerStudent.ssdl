@@ -58,11 +58,10 @@
     <Property Name="Siso" Type="int" />
     <Property Name="HK" Type="int" />
     <Property Name="MaGV" Type="char" MaxLength="4" />
-    <Property Name="MaMH" Type="int" Nullable="false" />
-    <Property Name="NamHoc" Type="int" />
     <Property Name="Thu" Type="char" MaxLength="1" />
     <Property Name="TietBD" Type="int" />
     <Property Name="TietKT" Type="int" />
+    <Property Name="DiaDiem" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="MONHOC">
     <Key>
@@ -72,9 +71,9 @@
     <Property Name="TenMH" Type="nvarchar" MaxLength="50" />
     <Property Name="SoTinChi" Type="int" />
     <Property Name="MaKhoa" Type="char" MaxLength="4" />
-    <Property Name="MaLHP" Type="char" MaxLength="4" />
     <Property Name="SoTinChiLyThuyet" Type="int" />
     <Property Name="SoTinChiThucHanh" Type="int" />
+    <Property Name="MaLHP" Type="char" MaxLength="4" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
@@ -146,18 +145,6 @@
       </Principal>
       <Dependent Role="LOPHOCPHAN">
         <PropertyRef Name="MaGV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_LHP_MH">
-    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
-    <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MONHOC">
-        <PropertyRef Name="MaMH" />
-      </Principal>
-      <Dependent Role="LOPHOCPHAN">
-        <PropertyRef Name="MaMH" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -245,10 +232,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_LHP_GV" Association="Self.FK_LHP_GV">
       <End Role="GIANGVIEN" EntitySet="GIANGVIEN" />
-      <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_LHP_MH" Association="Self.FK_LHP_MH">
-      <End Role="MONHOC" EntitySet="MONHOC" />
       <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
     </AssociationSet>
     <AssociationSet Name="FK_MH_K" Association="Self.FK_MH_K">

@@ -14,23 +14,15 @@ namespace ManagerStudent.Models
     
     public partial class MONHOC
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MONHOC()
-        {
-            this.LOPHOCPHANs = new HashSet<LOPHOCPHAN>();
-        }
-    
         public int MaMH { get; set; }
         public string TenMH { get; set; }
         public Nullable<int> SoTinChi { get; set; }
         public string MaKhoa { get; set; }
-        public string MaLHP { get; set; }
         public Nullable<int> SoTinChiLyThuyet { get; set; }
         public Nullable<int> SoTinChiThucHanh { get; set; }
+        public string MaLHP { get; set; }
     
         public virtual KHOA KHOA { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOPHOCPHAN> LOPHOCPHANs { get; set; }
-        public virtual LOPHOCPHAN LOPHOCPHAN { get; set; }
     }
 }
