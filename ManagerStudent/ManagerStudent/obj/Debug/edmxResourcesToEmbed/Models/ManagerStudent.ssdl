@@ -7,6 +7,14 @@
     <Property Name="MaAd" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="MatKhau" Type="varchar(max)" />
   </EntityType>
+  <EntityType Name="DangKyHoc">
+    <Key>
+      <PropertyRef Name="MaDK" />
+    </Key>
+    <Property Name="MaDK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSV" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaLHP" Type="char" MaxLength="4" Nullable="false" />
+  </EntityType>
   <EntityType Name="Diem">
     <Key>
       <PropertyRef Name="MaSV" />
@@ -62,6 +70,7 @@
     <Property Name="TietBD" Type="int" />
     <Property Name="TietKT" Type="int" />
     <Property Name="DiaDiem" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaMH" Type="int" />
   </EntityType>
   <EntityType Name="MONHOC">
     <Key>
@@ -73,7 +82,6 @@
     <Property Name="MaKhoa" Type="char" MaxLength="4" />
     <Property Name="SoTinChiLyThuyet" Type="int" />
     <Property Name="SoTinChiThucHanh" Type="int" />
-    <Property Name="MaLHP" Type="char" MaxLength="4" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
@@ -93,6 +101,16 @@
     <Property Name="MaKH" Type="int" Nullable="false" />
     <Property Name="ID_Status" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TINHTRANGHOC">
     <Key>
       <PropertyRef Name="ID_Status" />
@@ -100,6 +118,30 @@
     <Property Name="ID_Status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TinhTrang" Type="nvarchar" MaxLength="30" />
   </EntityType>
+  <Association Name="FK_DangKyHoc_LopHocPhan">
+    <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="1" />
+    <End Role="DangKyHoc" Type="Self.DangKyHoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOPHOCPHAN">
+        <PropertyRef Name="MaLHP" />
+      </Principal>
+      <Dependent Role="DangKyHoc">
+        <PropertyRef Name="MaLHP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DangKyHoc_SinhVien">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="DangKyHoc" Type="Self.DangKyHoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="DangKyHoc">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_DK_LHP">
     <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="1" />
     <End Role="Diem" Type="Self.Diem" Multiplicity="*" />
@@ -148,6 +190,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_LHP_MH">
+    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="0..1" />
+    <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONHOC">
+        <PropertyRef Name="MaMH" />
+      </Principal>
+      <Dependent Role="LOPHOCPHAN">
+        <PropertyRef Name="MaMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_MH_K">
     <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
     <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
@@ -157,18 +211,6 @@
       </Principal>
       <Dependent Role="MONHOC">
         <PropertyRef Name="MaKhoa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_MH_LHP">
-    <End Role="LOPHOCPHAN" Type="Self.LOPHOCPHAN" Multiplicity="0..1" />
-    <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LOPHOCPHAN">
-        <PropertyRef Name="MaLHP" />
-      </Principal>
-      <Dependent Role="MONHOC">
-        <PropertyRef Name="MaLHP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -210,6 +252,7 @@
   </Association>
   <EntityContainer Name="ManagerStudentModelStoreContainer">
     <EntitySet Name="ADMIN_ACCOUNT" EntityType="Self.ADMIN_ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DangKyHoc" EntityType="Self.DangKyHoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Diem" EntityType="Self.Diem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GIANGVIEN" EntityType="Self.GIANGVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHOA" EntityType="Self.KHOA" Schema="dbo" store:Type="Tables" />
@@ -217,7 +260,16 @@
     <EntitySet Name="LOPHOCPHAN" EntityType="Self.LOPHOCPHAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINHTRANGHOC" EntityType="Self.TINHTRANGHOC" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
+      <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
+      <End Role="DangKyHoc" EntitySet="DangKyHoc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DangKyHoc_SinhVien" Association="Self.FK_DangKyHoc_SinhVien">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="DangKyHoc" EntitySet="DangKyHoc" />
+    </AssociationSet>
     <AssociationSet Name="FK_DK_LHP" Association="Self.FK_DK_LHP">
       <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
       <End Role="Diem" EntitySet="Diem" />
@@ -234,12 +286,12 @@
       <End Role="GIANGVIEN" EntitySet="GIANGVIEN" />
       <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
     </AssociationSet>
+    <AssociationSet Name="FK_LHP_MH" Association="Self.FK_LHP_MH">
+      <End Role="MONHOC" EntitySet="MONHOC" />
+      <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
+    </AssociationSet>
     <AssociationSet Name="FK_MH_K" Association="Self.FK_MH_K">
       <End Role="KHOA" EntitySet="KHOA" />
-      <End Role="MONHOC" EntitySet="MONHOC" />
-    </AssociationSet>
-    <AssociationSet Name="FK_MH_LHP" Association="Self.FK_MH_LHP">
-      <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />
       <End Role="MONHOC" EntitySet="MONHOC" />
     </AssociationSet>
     <AssociationSet Name="FK_SV_K" Association="Self.FK_SV_K">

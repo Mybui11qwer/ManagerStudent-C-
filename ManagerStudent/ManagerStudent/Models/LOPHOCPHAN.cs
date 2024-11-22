@@ -17,8 +17,8 @@ namespace ManagerStudent.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOPHOCPHAN()
         {
+            this.DangKyHocs = new HashSet<DangKyHoc>();
             this.Diems = new HashSet<Diem>();
-            this.MONHOCs = new HashSet<MONHOC>();
         }
     
         public string MaLHP { get; set; }
@@ -31,11 +31,13 @@ namespace ManagerStudent.Models
         public Nullable<int> TietBD { get; set; }
         public Nullable<int> TietKT { get; set; }
         public string DiaDiem { get; set; }
+        public Nullable<int> MaMH { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DangKyHoc> DangKyHocs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diems { get; set; }
         public virtual GIANGVIEN GIANGVIEN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MONHOC> MONHOCs { get; set; }
+        public virtual MONHOC MONHOC { get; set; }
     }
 }

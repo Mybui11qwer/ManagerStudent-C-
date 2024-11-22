@@ -26,6 +26,7 @@ namespace ManagerStudent.Models
         }
     
         public virtual DbSet<ADMIN_ACCOUNT> ADMIN_ACCOUNT { get; set; }
+        public virtual DbSet<DangKyHoc> DangKyHocs { get; set; }
         public virtual DbSet<Diem> Diems { get; set; }
         public virtual DbSet<GIANGVIEN> GIANGVIENs { get; set; }
         public virtual DbSet<KHOA> KHOAs { get; set; }
@@ -33,6 +34,7 @@ namespace ManagerStudent.Models
         public virtual DbSet<LOPHOCPHAN> LOPHOCPHANs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TINHTRANGHOC> TINHTRANGHOCs { get; set; }
     }
 }

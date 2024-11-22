@@ -53,7 +53,12 @@
                 </td>
             </tr>
             <tr>
-                <td class="row-col-21">Giới tính: <b>@Session["GioiTinh"]</b></td>
+                <td class="row-col-21">
+                    Giới tính: @if (Session["GioiTinh"] != "1")
+                    {<b>Nữ</b>}
+                    @if (Session["GioiTinh"] == "1")
+                    {<b>Nam</b>}
+                </td>
                 <td colspan="4">Loại hình đào tạo:</td>
             </tr>
             <tr>
@@ -61,7 +66,7 @@
                 <td colspan="4">Cố vấn học tập:</td>
             </tr>
             <tr>
-                <td class="row-col-21">Tình trạng học:<b>@Model.TINHTRANGHOC.TinhTrang</b></td>
+                <td class="row-col-21">Tình trạng học: <b>@Model.TINHTRANGHOC.TinhTrang</b></td>
                 <td colspan="4">Liên hệ cố vấn học tập:</td>
             </tr>
             <tr>

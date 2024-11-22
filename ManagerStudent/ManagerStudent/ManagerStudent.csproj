@@ -243,6 +243,9 @@
     <Compile Include="Models\ADMIN_ACCOUNT.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DangKyHoc.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Diem.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
@@ -278,6 +281,9 @@
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SINHVIEN.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TINHTRANGHOC.cs">

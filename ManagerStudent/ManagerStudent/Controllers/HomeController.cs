@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ManagerStudent.Models;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
-using ManagerStudent.Models;
 
 namespace ManagerStudent.Controllers
 {
@@ -34,10 +30,10 @@ namespace ManagerStudent.Controllers
             var MSSV = Session["MaSV"];
             // Lấy thông tin sinh viên từ cơ sở dữ liệu
             var checkUserProgram = database.SINHVIENs
-                .Include(s => s.KHOAHOC)
-                .Include(s => s.KHOA)
-                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHANs))
-                .FirstOrDefault(s => s.MaSV == MSSV);
+                .Include("KHOA")
+                .Include("KHOA.MONHOCs")
+                .Include("KHOA.MONHOCs.LOPHOCPHANs")
+                .FirstOrDefault(s => s.MaSV == MSSV); ;
             return View(checkUserProgram);
         }
         public ActionResult Schedule()

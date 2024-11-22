@@ -24,12 +24,7 @@ namespace ManagerStudent.Controllers
         }
         public ActionResult ManagerStudent()
         {
-            List<SINHVIEN> sINHVIENs = database.SINHVIENs
-                .Include(s => s.KHOAHOC)
-                .Include(s => s.KHOA)
-                .Include(k => k.KHOA.MONHOCs)
-                .Include(m => m.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHAN))
-                .ToList();
+            List<SINHVIEN> sINHVIENs = database.SINHVIENs.ToList();
             return View(sINHVIENs);
         }
         public ActionResult AddNewStudent()

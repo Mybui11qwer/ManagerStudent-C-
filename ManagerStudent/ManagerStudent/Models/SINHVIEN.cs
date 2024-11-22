@@ -17,6 +17,7 @@ namespace ManagerStudent.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SINHVIEN()
         {
+            this.DangKyHocs = new HashSet<DangKyHoc>();
             this.Diems = new HashSet<Diem>();
         }
     
@@ -34,6 +35,8 @@ namespace ManagerStudent.Models
         public int MaKH { get; set; }
         public int ID_Status { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DangKyHoc> DangKyHocs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diems { get; set; }
         public virtual KHOA KHOA { get; set; }
