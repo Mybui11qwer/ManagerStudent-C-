@@ -13,78 +13,75 @@
             <b>@Model.KHOA.TenKhoa</b>
         </div>
 
-        <!-- Initialize a set to track displayed semesters (Học Kỳ) -->
+        <!-- Group MONHOCs by Học Kỳ -->
         @{
-            var displayedHK = new HashSet<int>();
+            var groupedByHK = Model.KHOA.MONHOCs
+                .SelectMany(m => m.LOPHOCPHANs.Select(lp => new { LopHocPhan = lp, MonHoc = m }))
+                .GroupBy(x => x.LopHocPhan.HK ?? 0)
+                .OrderBy(g => g.Key); // Sort by HK
         }
 
-        <!-- Table for Chương trình đào tạo -->
-        <!-- HK1 -->
-        @foreach (var monhoc in Model.KHOA.MONHOCs)
+        <!-- Render tables for each Học Kỳ -->
+        @foreach (var group in groupedByHK)
         {
             <table>
-                @foreach(var lophocphan in monhoc.LOPHOCPHANs)
-                {
-                    if (!displayedHK.Contains(lophocphan.HK ?? 0))
+                <!-- Display the semester header -->
+                <thead>
+                    <tr>
+                        <th colspan="10">Học Kỳ: @group.Key</th>
+                    </tr>
+                    <tr>
+                        <th>TT</th>
+                        <th>MÃ HỌC PHẦN</th>
+                        <th>TÊN HỌC PHẦN</th>
+                        <th>SỐ TC</th>
+                        <th>SỐ TIẾT</th>
+                        <th>LT</th>
+                        <th>TH</th>
+                        <th>HỌC PHẦN TIÊN QUYẾT</th>
+                        <th>HỌC PHẦN HỌC TRƯỚC</th>
+                        <th>KHOA/BỘ MÔN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int tt = 1;
+                        int tongSoTinChi = 0;
+                        var processedCourses = new HashSet<string>();
+                    }
+                    @foreach (var item in group)
                     {
-                        <!-- Display the semester header only once per unique Học Kỳ -->
-                        <thead>
-                            <tr>
-                                <th colspan="10">Học Kỳ: @lophocphan.HK</th>
-                            </tr>
-                            <tr>
-                                <th>TT</th>
-                                <th>MÃ HỌC PHẦN</th>
-                                <th>TÊN HỌC PHẦN</th>
-                                <th>SỐ TC</th>
-                                <th>SỐ TIẾT</th>
-                                <th>LT</th>
-                                <th>TH</th>
-                                <th>HỌC PHẦN TIÊN QUYẾT</th>
-                                <th>HỌC PHẦN HỌC TRƯỚC</th>
-                                <th>KHOA/BỘ MÔN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @{
-                                int tt = 1;
-                                int tongSoTinChi = 0;
-                            }
-                            @foreach (var Monhoc in Model.KHOA.MONHOCs)
-                            {
-                                <tr>
-                                    <td>@tt</td>
-                                    <td>@Monhoc.MaMH</td>
-                                    <td>@Monhoc.TenMH</td>
-                                    <td>@Monhoc.SoTinChi</td>
-                                    <td>Số tiết</td>
-                                    <td>@Monhoc.SoTinChiLyThuyet</td>
-                                    <td>@Monhoc.SoTinChiThucHanh</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>@Monhoc.KHOA.TenKhoa</td>
-                                </tr>
-                                {
-                                    tt++;
-                                    tongSoTinChi += Monhoc.SoTinChi ?? 0;
-                                }
-                            }
-
-                            <!-- Display total credits row -->
-                            <tr>
-                                <td colspan="3">Cộng học phần Bắt Buộc:</td>
-                                <td colspan="7">@tongSoTinChi</td>
-                            </tr>
-                        </tbody>
+                        var Monhoc = item.MonHoc;
+                        if (!processedCourses.Contains(Monhoc.TenMH))
                         {
-                            // Add the displayed semester to the HashSet
-                            displayedHK.Add(lophocphan.HK ?? 0);
+                            <tr>
+                                <td>@tt</td>
+                                <td>@Monhoc.MaMH</td>
+                                <td>@Monhoc.TenMH</td>
+                                <td>@Monhoc.SoTinChi</td>
+                                <td>Số tiết</td>
+                                <td>@Monhoc.SoTinChiLyThuyet</td>
+                                <td>@Monhoc.SoTinChiThucHanh</td>
+                                <td></td>
+                                <td></td>
+                                <td>@Monhoc.KHOA.TenKhoa</td>
+                            </tr>
+                            tt++;
+                        }
+
+                        {
+                            tongSoTinChi += Monhoc.SoTinChi ?? 0;
+                            processedCourses.Add(Monhoc.TenMH);                           
                         }
                     }
-                }
+
+                    <!-- Display total credits row -->
+                    <tr>
+                        <td colspan="3">Cộng học phần Bắt Buộc:</td>
+                        <td colspan="7">@tongSoTinChi</td>
+                    </tr>
+                </tbody>
             </table>
         }
     </div>
-
 </section>
-

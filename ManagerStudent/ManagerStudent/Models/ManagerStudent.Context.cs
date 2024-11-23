@@ -34,7 +34,6 @@ namespace ManagerStudent.Models
         public virtual DbSet<LOPHOCPHAN> LOPHOCPHANs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TINHTRANGHOC> TINHTRANGHOCs { get; set; }
     }
 }

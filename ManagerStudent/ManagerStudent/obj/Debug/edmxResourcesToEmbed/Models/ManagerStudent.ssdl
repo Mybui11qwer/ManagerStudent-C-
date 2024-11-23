@@ -101,16 +101,6 @@
     <Property Name="MaKH" Type="int" Nullable="false" />
     <Property Name="ID_Status" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TINHTRANGHOC">
     <Key>
       <PropertyRef Name="ID_Status" />
@@ -260,7 +250,6 @@
     <EntitySet Name="LOPHOCPHAN" EntityType="Self.LOPHOCPHAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINHTRANGHOC" EntityType="Self.TINHTRANGHOC" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
       <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHAN" />

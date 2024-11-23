@@ -283,9 +283,6 @@
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\TINHTRANGHOC.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>

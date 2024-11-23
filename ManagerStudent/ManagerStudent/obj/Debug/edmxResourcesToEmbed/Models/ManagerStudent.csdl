@@ -122,16 +122,6 @@
     <NavigationProperty Name="KHOAHOC" Relationship="Self.FK_SV_KH" FromRole="SINHVIEN" ToRole="KHOAHOC" />
     <NavigationProperty Name="TINHTRANGHOC" Relationship="Self.FK_SV_TT" FromRole="SINHVIEN" ToRole="TINHTRANGHOC" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TINHTRANGHOC">
     <Key>
       <PropertyRef Name="ID_Status" />
@@ -282,7 +272,6 @@
     <EntitySet Name="LOPHOCPHANs" EntityType="Self.LOPHOCPHAN" />
     <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
     <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TINHTRANGHOCs" EntityType="Self.TINHTRANGHOC" />
     <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
       <End Role="LOPHOCPHAN" EntitySet="LOPHOCPHANs" />
