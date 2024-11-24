@@ -57,32 +57,30 @@
                         {
                             bool hasClass = false;
 
-                            foreach (var monhoc in Model.KHOA.MONHOCs)
+                            foreach (var monhoc in Model.DangKyHocs)
                             {
-                                foreach (var lophocphan in monhoc.LOPHOCPHANs)
+                                foreach (var lophocphan in monhoc.LOPHOCPHAN.DangKyHocs)
                                 {
-                                    if (lophocphan.TietBD == tiet && lophocphan.Thu == day.ToString())
+                                    if (lophocphan.LOPHOCPHAN.TietBD == tiet && lophocphan.LOPHOCPHAN.Thu == day.ToString())
                                     {
-                                        int rowSpan = (lophocphan.TietKT ?? 0) - (lophocphan.TietBD ?? 0) + 1; // Calculate the rowspan based on the class duration
+                                        int rowSpan = (lophocphan.LOPHOCPHAN.TietKT ?? 0) - (lophocphan.LOPHOCPHAN.TietBD ?? 0) + 1; // Calculate the rowspan based on the class duration
                                         hasClass = true;
-                                        int sotiet = (lophocphan.TietKT ?? 0) - (lophocphan.TietBD ?? 0) + 1;
-                                        for (int t = tiet; t <= lophocphan.TietKT; t++)
+                                        int sotiet = (lophocphan.LOPHOCPHAN.TietKT ?? 0) - (lophocphan.LOPHOCPHAN.TietBD ?? 0) + 1;
+                                        for (int t = tiet; t <= lophocphan.LOPHOCPHAN.TietKT; t++)
                                         {
                                             mergedCells[(t, day)] = true;
                                         }
-
                                         <td rowspan="@rowSpan">
-                                            <span class="class-title">@lophocphan.DiaDiem</span><br />
-                                            <span>@monhoc.TenMH (@monhoc.MaMH)</span><br />
+                                            <span class="class-title">@lophocphan.LOPHOCPHAN.DiaDiem</span><br />
+                                            <span>@monhoc.LOPHOCPHAN.MONHOC.TenMH (@monhoc.LOPHOCPHAN.MONHOC.MaMH)</span><br />
                                             <span>LHP: @lophocphan.MaLHP</span><br />
                                             <span>Số tiết: @sotiet</span><br />
-                                            <span>Tiết: @lophocphan.TietBD - @lophocphan.TietKT</span><br />
-                                            <span class="class-teacher">GV: @lophocphan.MaGV</span>
+                                            <span>Tiết: @lophocphan.LOPHOCPHAN.TietBD - @lophocphan.LOPHOCPHAN.TietKT</span><br />
+                                            <span class="class-teacher">GV: @lophocphan.LOPHOCPHAN.GIANGVIEN.HoTen</span>
                                         </td>
                                     }
                                 }
                             }
-
                             if (!hasClass && !mergedCells.ContainsKey((tiet, day)))
                             {
                                 <td></td>

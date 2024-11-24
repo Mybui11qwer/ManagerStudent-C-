@@ -316,6 +316,7 @@
     <Content Include="Content\UserPage\Function\Information.css" />
     <Content Include="Content\UserPage\Function\Notification.css" />
     <Content Include="Content\UserPage\Function\Program-Edu.css" />
+    <Content Include="Content\UserPage\Function\Result.css" />
     <Content Include="Content\UserPage\Function\Schedule.css" />
     <Content Include="Content\UserPage\Header-Footer.css" />
     <Content Include="Content\UserPage\Login.css" />
@@ -385,6 +386,7 @@
     <Content Include="Views\Shared\LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\ManagerStudent.cshtml" />
     <Content Include="Views\Admin\AddNewStudent.cshtml" />
+    <Content Include="Views\Home\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

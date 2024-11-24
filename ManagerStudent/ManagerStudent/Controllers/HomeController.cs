@@ -40,16 +40,20 @@ namespace ManagerStudent.Controllers
         {
             var MSSV = Session["MaSV"];
             var checkSchedule = database.SINHVIENs
-                .Include(kh => kh.KHOAHOC)
-                .Include(k => k.KHOA)
-                .Include(m => m.KHOA.MONHOCs)
-                .Include(lhp => lhp.KHOA.MONHOCs.Select(mon => mon.LOPHOCPHANs))
+                .Include(kh => kh.DangKyHocs)
+                .Include(lhp => lhp.DangKyHocs.Select(mon => mon.LOPHOCPHAN))
                 .FirstOrDefault(s => s.MaSV == MSSV);
             return View(checkSchedule);
         }
         public ActionResult ExamSchedule()
         {
             return View();
+        }
+        public ActionResult Result()
+        {
+            var MSSV = Session["MaSV"];
+            var checkResult = database.Diems.Where(d => d.MaSV == MSSV).ToList();
+            return View(checkResult);
         }
     }
 }

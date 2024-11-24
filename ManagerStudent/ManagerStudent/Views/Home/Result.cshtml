@@ -1,0 +1,120 @@
+﻿@model List<ManagerStudent.Models.Diem>
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/LayoutUser.cshtml";
+}
+<link rel="stylesheet" href="~/Content/UserPage/Function/Result.css" />
+<div class="container">
+    <h3>Kết quả học tập</h3>
+    <div class="filter-section">
+        <label for="program">Chương trình đào tạo:</label>
+        <select id="program">
+            <option>Công nghệ phần mềm</option>
+        </select>
+        <label for="year">Năm học:</label>
+        <select id="year">
+            <option>Tất cả</option>
+        </select>
+        <label for="semester">Học kỳ:</label>
+        <select id="semester">
+            <option>Tất cả</option>
+        </select>
+    </div>
+    <div class="options">
+        <input type="radio" id="view-sv" name="view" checked>
+        <label for="view-sv">Xem điểm SV</label>
+        <input type="radio" id="view-ctdt" name="view">
+        <label for="view-ctdt">Xem điểm theo CTĐT</label>
+    </div>
+    <div class="notes">
+        <p>Chú ý:</p>
+        <ul>
+            <li>Những môn có dấu (*) sẽ không tính điểm trung bình mà chỉ là môn điều kiện.</li>
+            <li><span class="pass">✔</span> Học phần đậu</li>
+            <li><span class="fail">✖</span> Học phần rớt</li>
+        </ul>
+    </div>
+    <table class="result-form">
+        <thead>
+            <tr class="tilte-result">
+                <th>STT</th>
+                <th>Mã học phần</th>
+                <th>Tên học phần</th>
+                <th>Tín chỉ</th>
+                <th>Điểm hệ 10</th>
+                <th>Điểm hệ 4</th>
+                <th>Điểm chữ</th>
+                <th>Kết quả</th>
+                <th>Chi tiết</th>
+                <th>Ghi chú</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model)
+            {
+                double diemhe10 = (result.DiemChuyenCan ?? 0) * 0.2 + (result.DiemGiuaKy ?? 0) * 0.3 + (result.DiemCuoiKy ?? 0) * 0.5;
+                <tr>
+                    <td>1</td>
+                    <td>@result.MaLHP</td>
+                    <td>@result.LOPHOCPHAN.TenLHP</td>
+                    <td>
+                        @(result?.LOPHOCPHAN?.MONHOC?.SoTinChi != null ? ((double)result.LOPHOCPHAN.MONHOC.SoTinChi).ToString("F1") : "0.0")
+                    </td>
+                    <td>@diemhe10.ToString("F1")</td>
+                    <td>2.00</td>
+                    @if (diemhe10 < 2)
+                    {
+                        <td>F</td>
+                    }
+                    @if (diemhe10 > 2 && diemhe10 < 4)
+                    {
+                        <td>D</td>
+                    }
+                    @if (diemhe10 > 4 && diemhe10 < 6)
+                    {
+                        <td>C</td>
+                    }
+                    @if (diemhe10 > 6 && diemhe10 < 8)
+                    {
+                        <td>B</td>
+                    }
+                    @if (diemhe10 > 8)
+                    {
+                        <td>A</td>
+                    }
+                <td>
+                    @if (diemhe10 < 2)
+                    {
+                        <span class="fail">✖</span>
+                    }
+                    @if (diemhe10 > 2 && diemhe10 < 4)
+                    {
+                        <span class="fail">✖</span>
+                    }
+                    @if (diemhe10 > 4 && diemhe10 < 6)
+                    {
+                        <span class="pass">✔</span>
+                    }
+                    @if (diemhe10 > 6 && diemhe10 < 8)
+                    {
+                        <span class="pass">✔</span>
+                    }
+                    @if (diemhe10 > 8)
+                    {
+                        <span class="pass">✔</span>
+                    }
+                </td>
+                    <td><a href="#">📄</a></td>
+                    <td></td>
+                </tr>
+            }
+            <!-- Thêm các dòng khác tương tự -->
+        </tbody>
+    </table>
+    <div class="summary">
+        <p>- Số tín chỉ tích lũy: 19</p>
+        <p>- Điểm trung bình tích lũy: 2.34</p>
+        <p>- Điểm rèn luyện: 0.00 - Xếp loại (RL): Kém (Không thực hiện đánh giá)</p>
+    </div>
+</div>
+
