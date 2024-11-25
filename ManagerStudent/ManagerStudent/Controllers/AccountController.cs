@@ -44,7 +44,7 @@ namespace ManagerStudent.Controllers
                 var teacherCheck = database.GIANGVIENs.FirstOrDefault(u => u.Email == User.EmailLogin && u.MatKhau == User.PasswordLogin);
                 if (teacherCheck != null)
                 {
-                    // Set role and session info for student
+                    // Set role and session info for teacher
                     TempData["UserRole"] = "Teacher";
                     Session["Email"] = teacherCheck.Email;
                     Session["HoTen"] = teacherCheck.HoTen;

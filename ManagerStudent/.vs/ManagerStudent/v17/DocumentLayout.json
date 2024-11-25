@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\views\\home\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\views\\shared\\layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\shared\\layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\views\\home\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\content\\userpage\\function\\result.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\content\\userpage\\function\\result.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|c:\\users\\asus\\onedrive\\documents\\managerstudent-c-\\managerstudent\\managerstudent\\controllers\\giangviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1E818C9-0E4C-4504-9BAA-374B61FB84DB}|ManagerStudent\\ManagerStudent.csproj|solutionrelative:managerstudent\\controllers\\giangviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ManagerStudent\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-22T13:24:03.215Z",
               "IsPinned": true,
@@ -49,53 +45,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Result.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Result.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Result.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Result.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Home\\Result.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAiwFsAAAAzAAAAAAAAAA==",
+              "Title": "LayoutUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
+              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
+              "RelativeToolTip": "ManagerStudent\\Views\\Shared\\LayoutUser.cshtml",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAQwI0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T12:06:38.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Schedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Schedule.cshtml",
-              "RelativeDocumentMoniker": "ManagerStudent\\Views\\Home\\Schedule.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Views\\Home\\Schedule.cshtml",
-              "RelativeToolTip": "ManagerStudent\\Views\\Home\\Schedule.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAACDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T12:36:50.739Z",
+              "WhenOpened": "2024-11-25T02:07:03.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ManagerStudent\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAABQAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ManagerStudent\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:29:57.558Z",
+              "WhenOpened": "2024-11-25T02:05:06.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Result.css",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function\\Result.css",
-              "RelativeDocumentMoniker": "ManagerStudent\\Content\\UserPage\\Function\\Result.css",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Content\\UserPage\\Function\\Result.css",
-              "RelativeToolTip": "ManagerStudent\\Content\\UserPage\\Function\\Result.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-24T12:09:58.79Z",
+              "DocumentIndex": 3,
+              "Title": "GiangVienController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\GiangVienController.cs",
+              "RelativeDocumentMoniker": "ManagerStudent\\Controllers\\GiangVienController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Documents\\ManagerStudent-C-\\ManagerStudent\\ManagerStudent\\Controllers\\GiangVienController.cs",
+              "RelativeToolTip": "ManagerStudent\\Controllers\\GiangVienController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:03:52.209Z",
               "EditorCaption": ""
             }
           ]

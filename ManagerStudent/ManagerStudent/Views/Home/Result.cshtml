@@ -53,15 +53,17 @@
             @foreach (var result in Model)
             {
                 double diemhe10 = (result.DiemChuyenCan ?? 0) * 0.2 + (result.DiemGiuaKy ?? 0) * 0.3 + (result.DiemCuoiKy ?? 0) * 0.5;
+                double diemhe4 = diemhe10 * 0.4;
+                int sotinchi = (result.LOPHOCPHAN.MONHOC?.SoTinChi ?? 0);
                 <tr>
                     <td>1</td>
                     <td>@result.MaLHP</td>
-                    <td>@result.LOPHOCPHAN.TenLHP</td>
+                    <td>@result.LOPHOCPHAN.MONHOC.TenMH</td>
                     <td>
                         @(result?.LOPHOCPHAN?.MONHOC?.SoTinChi != null ? ((double)result.LOPHOCPHAN.MONHOC.SoTinChi).ToString("F1") : "0.0")
                     </td>
                     <td>@diemhe10.ToString("F1")</td>
-                    <td>2.00</td>
+                    <td>@diemhe4.ToString("F2")</td>
                     @if (diemhe10 < 2)
                     {
                         <td>F</td>
@@ -112,9 +114,9 @@
         </tbody>
     </table>
     <div class="summary">
-        <p>- Số tín chỉ tích lũy: 19</p>
-        <p>- Điểm trung bình tích lũy: 2.34</p>
-        <p>- Điểm rèn luyện: 0.00 - Xếp loại (RL): Kém (Không thực hiện đánh giá)</p>
+        <p>- Số tín chỉ tích lũy: </p>
+        <p>- Điểm trung bình tích lũy: </p>
+        <p>- Điểm rèn luyện: 0.00 - Xếp loại (RL): </p>
     </div>
 </div>
 

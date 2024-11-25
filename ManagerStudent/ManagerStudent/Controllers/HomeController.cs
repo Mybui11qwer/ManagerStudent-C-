@@ -52,7 +52,10 @@ namespace ManagerStudent.Controllers
         public ActionResult Result()
         {
             var MSSV = Session["MaSV"];
-            var checkResult = database.Diems.Where(d => d.MaSV == MSSV).ToList();
+            var checkResult = database.Diems
+                .Include(d => d.LOPHOCPHAN)
+                .Include(l => l.LOPHOCPHAN.MONHOC)
+                .Where(d => d.MaSV == MSSV).ToList();
             return View(checkResult);
         }
     }
