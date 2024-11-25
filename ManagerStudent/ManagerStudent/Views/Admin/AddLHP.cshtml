@@ -1,0 +1,20 @@
+﻿@model ManagerStudent.Models.LOPHOCPHAN
+
+@{
+    ViewBag.Title = "AddLHP";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+    <link href="~/Content/UserPage/Function/AddLHP.css" rel="stylesheet" type="text/css">
+}
+
+<h2>Add New Course</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.MaLHP)
+    @Html.TextBoxFor(model => model.MaLHP)
+
+    @Html.LabelFor(model => model.TenLHP)
+    @Html.TextBoxFor(model => model.TenLHP)
+
+    <button type="submit">Thêm</button>
+}

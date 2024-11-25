@@ -13,10 +13,10 @@ namespace ManagerStudent.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ManagerStudentEntities : DbContext
+    public partial class ManagerStudentEntities1 : DbContext
     {
-        public ManagerStudentEntities()
-            : base("name=ManagerStudentEntities")
+        public ManagerStudentEntities1()
+            : base("name=ManagerStudentEntities1")
         {
         }
     
@@ -33,6 +33,7 @@ namespace ManagerStudent.Models
         public virtual DbSet<KHOAHOC> KHOAHOCs { get; set; }
         public virtual DbSet<LOPHOCPHAN> LOPHOCPHANs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
+        public virtual DbSet<NOTIFICATION> NOTIFICATIONs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
         public virtual DbSet<TINHTRANGHOC> TINHTRANGHOCs { get; set; }
     }
