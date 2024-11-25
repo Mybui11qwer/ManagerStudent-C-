@@ -1,4 +1,6 @@
 ﻿using ManagerStudent.Models;
+using System.Collections.Generic;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
@@ -23,7 +25,23 @@ namespace ManagerStudent.Controllers
         }
         public ActionResult Notification()
         {
-            return View();
+            var notifications = database.NOTIFICATIONs
+                .OrderByDescending(n => n.SentTime)
+                .Select(n => new NotificationViewModel
+                {
+                    Title = n.Title,
+                    Content = n.Content,
+                    Sender = n.Sender,
+                    SentTime = n.SentTime ?? DateTime.MinValue
+                })
+                .ToList();
+
+            if (notifications == null || !notifications.Any())
+            {
+                notifications = new List<NotificationViewModel>(); // Tránh null
+            }
+
+            return View(notifications);
         }
         public ActionResult ProgramEdu()
         {

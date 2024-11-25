@@ -109,6 +109,13 @@ CREATE TABLE ADMIN_ACCOUNT(
 	MaAd CHAR(5) PRIMARY KEY,
 	MatKhau VARCHAR(MAX)
 )
+CREATE TABLE NOTIFICATION (
+    NotificationID INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(100),
+    Content NVARCHAR(MAX),
+    Sender NVARCHAR(50),
+    SentTime DATETIME
+);
 
 
 --thêm dữ liệu cho từng bảng
@@ -142,5 +149,56 @@ VALUES
 
 INSERT INTO ADMIN_ACCOUNT VALUES('admin','123')
 
+INSERT INTO NOTIFICATION (Title, Content, Sender, SentTime)
+VALUES 
+(N'Lịch nghỉ học', 
+ N'Thông báo toàn bộ sinh viên nghỉ học vào ngày lễ 30/4 - 1/5. Các lớp học sẽ được dời lịch và cập nhật trong hệ thống. Vui lòng kiểm tra thông báo chi tiết.', 
+ N'Phòng đào tạo', 
+ '2024-11-24 08:00:00'),
+
+(N'Cập nhật điểm', 
+ N'Tất cả sinh viên vui lòng kiểm tra điểm trên hệ thống trước ngày 30/11. Nếu có bất kỳ sai sót nào, liên hệ ngay với cố vấn học tập hoặc phòng đào tạo.', 
+ N'Phòng đào tạo', 
+ '2024-11-23 15:00:00'),
+
+(N'Khai giảng khóa mới', 
+ N'Khóa học lập trình Python sẽ khai giảng ngày 01/12. Đăng ký ngay tại phòng CNTT hoặc thông qua hệ thống trực tuyến. Hạn chót đăng ký là 28/11.', 
+ N'Trung tâm CNTT', 
+ '2024-11-22 10:00:00'),
+
+(N'Thông báo học bổng', 
+ N'Chương trình học bổng hỗ trợ sinh viên năm 2024 đã chính thức mở. Sinh viên đạt kết quả học tập từ 8.0 trở lên có thể nộp hồ sơ từ 01/12 đến 31/12.', 
+ N'Phòng Công tác Sinh viên', 
+ '2024-11-21 09:00:00'),
+
+(N'Tri ân ngày nhà giáo Việt Nam', 
+ N'Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 sẽ được tổ chức tại hội trường A lúc 8h sáng. Tất cả sinh viên được khuyến khích tham gia.', 
+ N'Ban tổ chức', 
+ '2024-11-20 07:00:00'),
+
+(N'Triển lãm công nghệ', 
+ N'Triển lãm Công nghệ 2024 sẽ diễn ra từ 5/12 đến 7/12 tại sảnh chính của trường. Đây là cơ hội để sinh viên tiếp cận các công nghệ mới nhất.', 
+ N'Khoa Công nghệ thông tin', 
+ '2024-11-19 10:30:00'),
+
+(N'Cuộc thi sáng tạo', 
+ N'Cuộc thi sáng tạo sinh viên 2024 chính thức mở đăng ký. Thời hạn đăng ký: từ 15/11 đến 30/11. Hãy thử sức để nhận nhiều giải thưởng hấp dẫn.', 
+ N'Phòng Nghiên cứu Khoa học', 
+ '2024-11-18 14:00:00'),
+
+(N'Hội thảo khởi nghiệp', 
+ N'Hội thảo "Sinh viên khởi nghiệp - cơ hội và thách thức" sẽ diễn ra ngày 3/12. Diễn giả: ông Nguyễn Văn Thành, CEO tập đoàn XYZ.', 
+ N'Phòng Quan hệ doanh nghiệp', 
+ '2024-11-17 09:30:00'),
+
+(N'Thông báo đăng ký môn học', 
+ N'Kỳ đăng ký môn học cho học kỳ 2 năm học 2024-2025 sẽ bắt đầu từ ngày 10/12. Sinh viên vui lòng chuẩn bị danh sách môn học và đăng ký đúng thời hạn.', 
+ N'Phòng đào tạo', 
+ '2024-11-16 11:00:00'),
+
+(N'Cảnh báo an ninh', 
+ N'Hiện tại có một số báo cáo về tình trạng mất cắp trong khuôn viên trường. Vui lòng cẩn thận giữ gìn tài sản cá nhân và báo ngay cho bảo vệ khi cần.', 
+ N'Phòng Hành chính', 
+ '2024-11-15 13:45:00');
 
 

@@ -281,6 +281,7 @@
     <Compile Include="Models\MONHOC.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\NotificationViewModel.cs" />
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>

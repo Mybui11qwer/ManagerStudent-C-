@@ -1,26 +1,37 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Notification";
     Layout = "~/Views/Shared/LayoutUser.cshtml";
 }
+@model List<ManagerStudent.Models.NotificationViewModel>
 <link rel="stylesheet" href="~/Content/UserPage/Function/Notification.css">
-
-<div id="functionMenu"></div>
 <section class="content">
     <h3>Thông báo</h3>
     <div class="content-form">
-        <table class="Notification-form">
-            <tr class="table-title">
-                <th class="tilte-notification">Tiêu đề</th>
-                <th class="title-sender">Người gửi</th>
-                <th class="tilte-time">Thời gian gửi</th>
-            </tr>
-            <tr class="table-content">
-                <td class="content-notification">Nội dung thông báo</td>
-                <td class="content-sender">Tên người gửi</td>
-                <td class="content-time">Ngày giờ gửi</td>
-            </tr>
-        </table>
+        @if (Model != null && Model.Any())
+        {
+            <table class="Notification-form">
+                <thead>
+                    <tr class="table-title">
+                        <th class="tilte-notification">Tiêu đề</th>
+                        <th class="title-sender">Người gửi</th>
+                        <th class="tilte-time">Thời gian gửi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var notification in Model)
+                    {
+                        <tr class="table-content">
+                            <td class="content-notification">@notification.Title</td>
+                            <td class="content-sender">@notification.Sender</td>
+                            <td class="content-time">@notification.SentTime.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Không có thông báo nào để hiển thị.</p>
+        }
     </div>
 </section>
-
