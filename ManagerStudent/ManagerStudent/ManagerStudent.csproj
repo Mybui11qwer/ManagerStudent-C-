@@ -241,53 +241,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ADMIN_ACCOUNT.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DangKyHoc.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Diem.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\GIANGVIEN.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KHOA.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KHOAHOC.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\LoginViewModel.cs" />
-    <Compile Include="Models\LOPHOCPHAN.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ManagerStudent.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagerStudent.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ManagerStudent.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ManagerStudent.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagerStudent.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MONHOC.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\NotificationViewModel.cs" />
-    <Compile Include="Models\SINHVIEN.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TINHTRANGHOC.cs">
-      <DependentUpon>ManagerStudent.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ViewSinhVienModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -330,29 +285,12 @@
     <Content Include="Image\Logo\icon-microsoft.png" />
     <Content Include="Image\Logo\Logo-DH-Ngoai-Ngu-Tin-Hoc-HUFLIT.png" />
     <Content Include="Image\Logo\Logo-Portal.png" />
-    <Content Include="Models\ManagerStudent.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManagerStudent.edmx</DependentUpon>
-      <LastGenOutput>ManagerStudent.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ManagerStudent.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManagerStudent.edmx</DependentUpon>
-      <LastGenOutput>ManagerStudent.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\ManagerStudent.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ManagerStudent.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ManagerStudent.edmx.diagram">
-      <DependentUpon>ManagerStudent.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
