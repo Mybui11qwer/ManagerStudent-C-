@@ -13,5 +13,13 @@ namespace ManagerStudent.Controllers
         {
             return View();
         }
+        public ActionResult Information()
+        {
+            return View();
+        }
+        public ActionResult InputPoint()
+        {
+            return View();
+        }
     }
 }

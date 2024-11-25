@@ -47,6 +47,7 @@ namespace ManagerStudent.Controllers
                     // Set role and session info for teacher
                     TempData["UserRole"] = "Teacher";
                     Session["Email"] = teacherCheck.Email;
+                    Session["MaGV"] = teacherCheck.MaGV;
                     Session["HoTen"] = teacherCheck.HoTen;
                     Session["GioiTinh"] = teacherCheck.GioiTinh;
                     Session["DiaChi"] = teacherCheck.DiaChi;

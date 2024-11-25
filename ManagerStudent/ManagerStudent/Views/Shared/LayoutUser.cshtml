@@ -19,7 +19,7 @@
             <li><a href="~/Home/Index">Trang chủ</a></li>
             <li><a href="#">Thanh toán học phí</a></li>
             <li style="margin-left: auto;">
-                @if (Session["Email"] != null)
+                @if (Session["MaSV"] != null)
                 {
                     <a onclick="toggleDropdown()" class="btndrop" style="cursor: pointer">@Session["MaSV"] | @Session["HoTen"]</a>
                     <ul id="dropdownContent" class="dropdown-menu">
@@ -35,85 +35,161 @@
                         </li>
                     </ul>
                 }
+                @if (Session["MaGV"] != null)
+                {
+                    <a onclick="toggleDropdown()" class="btndrop" style="cursor: pointer">@Session["HoTen"]</a>
+                    <ul id="dropdownContent" class="dropdown-menu">
+                        <li>
+                            <a href="~/GiangVien/Information">Thông tin</a>
+                        </li>
+                        <li>
+                            <a href="#">Đổi mật khẩu</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="@Url.RouteUrl(new { controller = "Account", action = "Logout" })">Thoát</a>
+                        </li>
+                    </ul>
+                }
                 @if (Session["Email"] == null)
                 {
                     <a href="~/Account/Login" id="login-link">
-                        Login
+                        Đăng nhập
                     </a>
                 }
             </li>
         </ul>
     </nav>
     <main>
-        <section class="sidebar">
-            <h3>Chức năng</h3>
-            <h4>Trang cá nhân</h4>
-            <div class="private">
-                <table class="profile">
-                    <tr>
-                        <td><a href="~/Home/Information">Thông tin cá nhân</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="~/Home/Notification">Thông báo <span>(..)</span></a></td>
-                    </tr>
-                    <tr>
-                    <td><a href="~/Home/Index">Hướng dẫn sử dụng</a></td>
-                    </tr>
-                </table>
-            </div>
-            <h4>Tra cứu thông tin</h4>
-            <div class="private">
-                <table class="check-info">
-                    <tr>
-                        <td><a href="~/Home/ProgramEdu">Chương trình đào tạo</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="~/Home/Schedule">Lịch học</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="~/Home/ExamSchedule">Lịch thi</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Quyết định sinh viên</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="~/Home/Result">Kết quả học tập</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Kết quả rèn luyện</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Tài chính sinh viên</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Xem chi tiết hoá đơn</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Xem kết quả đăng ký học phần</a></td>
-                    </tr>
-                </table>
-            </div>
-            <h4>Chức năng trực tuyến</h4>
-            <div class="private">
-                <table class="function-online">
-                    <tr>
-                        <td><a href="#">Đăng ký học phần</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Đánh giá điểm rèn luyện</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Thủ tục trực tuyến</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Xin bảng điểm</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Liên hệ - góp ý (...)</a></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+        @if (Session["MaSV"] != null)
+        {
+            <section class="sidebar">
+                <h3>Chức năng</h3>
+                <h4>Trang cá nhân</h4>
+                <div class="private">
+                    <table class="profile">
+                        <tr>
+                            <td><a href="~/Home/Information">Thông tin cá nhân</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Notification">Thông báo <span>(..)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Index">Hướng dẫn sử dụng</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Tra cứu thông tin</h4>
+                <div class="private">
+                    <table class="check-info">
+                        <tr>
+                            <td><a href="~/Home/ProgramEdu">Chương trình đào tạo</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Schedule">Lịch học</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/ExamSchedule">Lịch thi</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Quyết định sinh viên</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Result">Kết quả học tập</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Kết quả rèn luyện</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tài chính sinh viên</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Xem chi tiết hoá đơn</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Xem kết quả đăng ký học phần</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Chức năng trực tuyến</h4>
+                <div class="private">
+                    <table class="function-online">
+                        <tr>
+                            <td><a href="#">Đăng ký học phần</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đánh giá điểm rèn luyện</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Thủ tục trực tuyến</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Xin bảng điểm</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Liên hệ - góp ý (...)</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        }
+        @if (Session["MaGV"] != null)
+        {
+            <section class="sidebar">
+                <h3>Chức năng</h3>
+                <h4>Trang cá nhân</h4>
+                <div class="private">
+                    <table class="profile">
+                        <tr>
+                            <td><a href="~/GiangVien/Information">Thông tin cá nhân</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/GiangVien/Notification">Thông báo <span>(..)</span></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Index">Hướng dẫn sử dụng</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Tra cứu thông tin</h4>
+                <div class="private">
+                    <table class="check-info">
+                        <tr>
+                            <td><a href="~/Home/Schedule">Thời khóa biểu</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Kết quả đăng ký dạy</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/ExamSchedule">Lịch gác thi</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tổng hợp giờ giảng dạy</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="~/Home/Result">Xem kết quả học tập LHP</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Chức năng trực tuyến</h4>
+                <div class="private">
+                    <table class="function-online">
+                        <tr>
+                            <td><a href="~/GiangVien/InputPoint">Nhập điểm quá trình</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Điểm danh online</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Thủ tục trực tuyến</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Liên hệ - góp ý (...)</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        }
         @RenderBody()
     </main>
     <footer>
