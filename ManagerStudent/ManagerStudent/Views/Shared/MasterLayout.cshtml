@@ -18,14 +18,18 @@
             <li><a href="#">Trang chủ</a></li>
             <li><a href="#">Thanh toán học phí</a></li>
             <li style="margin-left: auto">
-                @if (Session["Email"] != null)
+                @if (Session["MaSV"] != null)
                 {
                     <a href="~/Home/Information">@Session["MaSV"] | @Session["HoTen"]</a>
+                }
+                @if (Session["MaGV"] != null)
+                {
+                    <a href="~/GiangVien/Information">@Session["HoTen"]</a>
                 }
                 @if (Session["Email"] == null)
                 {
                     <a href="~/Account/Login" id="login-link">
-                        Login
+                        Đăng nhập
                     </a>
                 }
             </li>

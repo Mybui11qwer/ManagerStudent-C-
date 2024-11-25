@@ -388,10 +388,11 @@
     <Content Include="Views\Admin\ManagerStudent.cshtml" />
     <Content Include="Views\Admin\AddNewStudent.cshtml" />
     <Content Include="Views\Home\Result.cshtml" />
+    <Content Include="Views\GiangVien\Information.cshtml" />
+    <Content Include="Views\GiangVien\InputPoint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\GiangVien\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
