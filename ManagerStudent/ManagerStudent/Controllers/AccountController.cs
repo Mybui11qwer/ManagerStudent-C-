@@ -9,7 +9,7 @@ namespace ManagerStudent.Controllers
 {
     public class AccountController : Controller
     {
-        private ManagerStudentEntities database = new ManagerStudentEntities();
+        private ManagerStudentEntities1 database = new ManagerStudentEntities1();
 
         // GET: Account
         public ActionResult Login()

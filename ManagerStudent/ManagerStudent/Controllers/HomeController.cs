@@ -9,7 +9,7 @@ namespace ManagerStudent.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ManagerStudentEntities database = new ManagerStudentEntities();
+        private readonly ManagerStudentEntities1 database = new ManagerStudentEntities1();
         public ActionResult Index()
         {
             return View();

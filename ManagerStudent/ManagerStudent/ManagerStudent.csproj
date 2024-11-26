@@ -242,6 +242,33 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginViewModel.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Models\LOPHOCPHAN.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagerStudent.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerStudent.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagerStudent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagerStudent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerStudent.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MONHOC.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NOTIFICATION.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+>>>>>>> D
     <Compile Include="Models\NotificationViewModel.cs" />
     <Compile Include="Models\ViewSinhVienModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -268,9 +295,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Layout\AdminPage.css" />
     <Content Include="Content\UserPage\Function-header.css" />
+    <Content Include="Content\UserPage\Function\AddLHP.css" />
     <Content Include="Content\UserPage\Function\Function-design-index.css" />
     <Content Include="Content\UserPage\Function\index.css" />
     <Content Include="Content\UserPage\Function\Information.css" />
+    <Content Include="Content\UserPage\Function\LHP.css" />
     <Content Include="Content\UserPage\Function\Notification.css" />
     <Content Include="Content\UserPage\Function\Program-Edu.css" />
     <Content Include="Content\UserPage\Function\Result.css" />
@@ -327,8 +356,15 @@
     <Content Include="Views\Admin\ManagerStudent.cshtml" />
     <Content Include="Views\Admin\AddNewStudent.cshtml" />
     <Content Include="Views\Home\Result.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\GiangVien\Information.cshtml" />
     <Content Include="Views\GiangVien\InputPoint.cshtml" />
+=======
+    <Content Include="Views\Admin\UpdateStudent.cshtml" />
+    <Content Include="Views\Admin\LHP.cshtml" />
+    <Content Include="Views\Admin\EditLHP.cshtml" />
+    <Content Include="Views\Admin\AddLHP.cshtml" />
+>>>>>>> D
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

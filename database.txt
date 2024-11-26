@@ -111,10 +111,139 @@ CREATE TABLE ADMIN_ACCOUNT(
 )
 
 
+USE master;
+IF EXISTS (SELECT * FROM sys.databases WHERE name = 'ManagerStudent')
+	DROP DATABASE ManagerStudent;
+
+CREATE DATABASE ManagerStudent;
+GO
+USE ManagerStudent;
+
+-- Bảng KHOA
+CREATE TABLE KHOA (
+	MaKhoa CHAR(4) PRIMARY KEY,
+	TenKhoa NVARCHAR(30)
+);
+
+-- Bảng KHOAHOC
+CREATE TABLE KHOAHOC (
+	MaKH INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	TenKH NVARCHAR(30)
+);
+
+-- Bảng TINHTRANGHOC
+CREATE TABLE TINHTRANGHOC (
+	ID_Status INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	TinhTrang NVARCHAR(30)
+);
+
+-- Bảng SINHVIEN
+CREATE TABLE SINHVIEN (
+	MaSV CHAR(10) NOT NULL PRIMARY KEY,
+	HoTen NVARCHAR(50),
+	GioiTinh BIT,
+	DiaChi NVARCHAR(100),
+	NienKhoa CHAR(9),
+	CMND CHAR(12),
+	SoDienThoai CHAR(10),
+	Email VARCHAR(100),
+	NgaySinh DATE,
+	MatKhau VARCHAR(100),
+	MaKhoa CHAR(4),
+	MaKH INT NOT NULL,
+	ID_Status INT NOT NULL,
+	CONSTRAINT FK_SV_K FOREIGN KEY (MaKhoa) REFERENCES KHOA (MaKhoa),
+	CONSTRAINT FK_SV_KH FOREIGN KEY (MaKH) REFERENCES KHOAHOC (MaKH),
+	CONSTRAINT FK_SV_TT FOREIGN KEY (ID_Status) REFERENCES TINHTRANGHOC (ID_Status)
+);
+
+-- Bảng GIANGVIEN
+CREATE TABLE GIANGVIEN (
+	MaGV CHAR(4) PRIMARY KEY,
+	HoTen NVARCHAR(50),
+	GioiTinh BIT,
+	SoDienThoai CHAR(10),
+	Email NVARCHAR(50),
+	ChucVu NVARCHAR(20),
+	MatKhau VARCHAR(100),
+	NgaySinh DATE,
+	NgayVaoLam DATE,
+	DiaChi NVARCHAR(50),
+	MaKhoa CHAR(4),
+	CONSTRAINT FK_GV_K FOREIGN KEY (MaKhoa) REFERENCES KHOA (MaKhoa)
+);
+
+-- Bảng MONHOC
+CREATE TABLE MONHOC (
+	MaMH INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	TenMH NVARCHAR(50),
+	SoTinChi INT,
+	MaKhoa CHAR(4),
+	SoTinChiLyThuyet INT,
+	SoTinChiThucHanh INT,
+	CONSTRAINT FK_MH_K FOREIGN KEY (MaKhoa) REFERENCES KHOA (MaKhoa)
+);
+
+-- Bảng LOPHOCPHAN
+CREATE TABLE LOPHOCPHAN (
+	MaLHP CHAR(4) PRIMARY KEY,
+	TenLHP NVARCHAR(50),
+	CaHoc INT,
+	Siso INT,
+	HK INT,
+	MaGV CHAR(4),
+	Thu CHAR(1),
+	TietBD INT,
+	TietKT INT,
+	DiaDiem NVARCHAR(100),
+	MaMH INT NULL,
+	CONSTRAINT FK_LHP_GV FOREIGN KEY (MaGV) REFERENCES GIANGVIEN (MaGV),
+	CONSTRAINT FK_LHP_MH FOREIGN KEY (MaMH) REFERENCES MONHOC (MaMH)
+);
+
+-- Bảng DangKyHoc
+CREATE TABLE DangKyHoc (
+	MaDK INT IDENTITY(1,1) PRIMARY KEY,
+	MaSV CHAR(10) NOT NULL,
+	MaLHP CHAR(4) NOT NULL,
+	CONSTRAINT FK_DangKyHoc_SinhVien FOREIGN KEY (MaSV) REFERENCES SINHVIEN (MaSV),
+	CONSTRAINT FK_DangKyHoc_LopHocPhan FOREIGN KEY (MaLHP) REFERENCES LOPHOCPHAN (MaLHP)
+);
+
+-- Bảng Diem
+CREATE TABLE Diem (
+	MaSV CHAR(10) NOT NULL,
+	MaLHP CHAR(4) NOT NULL,
+	DiemChuyenCan INT,
+	DiemGiuaKy INT,
+	DiemCuoiKy INT,
+	CONSTRAINT PK_DK PRIMARY KEY (MaSV, MaLHP),
+	CONSTRAINT FK_DK_SV FOREIGN KEY (MaSV) REFERENCES SINHVIEN (MaSV),
+	CONSTRAINT FK_DK_LHP FOREIGN KEY (MaLHP) REFERENCES LOPHOCPHAN (MaLHP)
+);
+
+-- Bảng ADMIN_ACCOUNT
+CREATE TABLE ADMIN_ACCOUNT (
+	MaAd CHAR(5) PRIMARY KEY,
+	MatKhau VARCHAR(100)
+);
+
+-- Bảng NOTIFICATION
+CREATE TABLE NOTIFICATION (
+	NotificationID INT IDENTITY(1,1) PRIMARY KEY,
+	Title NVARCHAR(100),
+	Content NVARCHAR(MAX),
+	Sender NVARCHAR(50),
+	SentTime DATETIME
+);
 --thêm dữ liệu cho từng bảng
 INSERT INTO KHOAHOC(TenKH)
 VALUES 
-('2022-2025');
+('20221-2022'),
+('2022-2023'),
+('2023-2024'),
+('2024-2025'),
+('2025-2026');
 
 INSERT INTO TINHTRANGHOC(TinhTrang)
 VALUES
@@ -142,5 +271,84 @@ VALUES
 
 INSERT INTO ADMIN_ACCOUNT VALUES('admin','123')
 
+<<<<<<< HEAD
+=======
+INSERT INTO NOTIFICATION (Title, Content, Sender, SentTime)
+VALUES 
+(N'Lịch nghỉ học', 
+ N'Thông báo toàn bộ sinh viên nghỉ học vào ngày lễ 30/4 - 1/5. Các lớp học sẽ được dời lịch và cập nhật trong hệ thống. Vui lòng kiểm tra thông báo chi tiết.', 
+ N'Phòng đào tạo', 
+ '2024-11-24 08:00:00'),
+
+(N'Cập nhật điểm', 
+ N'Tất cả sinh viên vui lòng kiểm tra điểm trên hệ thống trước ngày 30/11. Nếu có bất kỳ sai sót nào, liên hệ ngay với cố vấn học tập hoặc phòng đào tạo.', 
+ N'Phòng đào tạo', 
+ '2024-11-23 15:00:00'),
+
+(N'Khai giảng khóa mới', 
+ N'Khóa học lập trình Python sẽ khai giảng ngày 01/12. Đăng ký ngay tại phòng CNTT hoặc thông qua hệ thống trực tuyến. Hạn chót đăng ký là 28/11.', 
+ N'Trung tâm CNTT', 
+ '2024-11-22 10:00:00'),
+
+(N'Thông báo học bổng', 
+ N'Chương trình học bổng hỗ trợ sinh viên năm 2024 đã chính thức mở. Sinh viên đạt kết quả học tập từ 8.0 trở lên có thể nộp hồ sơ từ 01/12 đến 31/12.', 
+ N'Phòng Công tác Sinh viên', 
+ '2024-11-21 09:00:00'),
+
+(N'Tri ân ngày nhà giáo Việt Nam', 
+ N'Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 sẽ được tổ chức tại hội trường A lúc 8h sáng. Tất cả sinh viên được khuyến khích tham gia.', 
+ N'Ban tổ chức', 
+ '2024-11-20 07:00:00'),
+
+(N'Triển lãm công nghệ', 
+ N'Triển lãm Công nghệ 2024 sẽ diễn ra từ 5/12 đến 7/12 tại sảnh chính của trường. Đây là cơ hội để sinh viên tiếp cận các công nghệ mới nhất.', 
+ N'Khoa Công nghệ thông tin', 
+ '2024-11-19 10:30:00'),
+
+(N'Cuộc thi sáng tạo', 
+ N'Cuộc thi sáng tạo sinh viên 2024 chính thức mở đăng ký. Thời hạn đăng ký: từ 15/11 đến 30/11. Hãy thử sức để nhận nhiều giải thưởng hấp dẫn.', 
+ N'Phòng Nghiên cứu Khoa học', 
+ '2024-11-18 14:00:00'),
+
+(N'Hội thảo khởi nghiệp', 
+ N'Hội thảo "Sinh viên khởi nghiệp - cơ hội và thách thức" sẽ diễn ra ngày 3/12. Diễn giả: ông Nguyễn Văn Thành, CEO tập đoàn XYZ.', 
+ N'Phòng Quan hệ doanh nghiệp', 
+ '2024-11-17 09:30:00'),
+
+(N'Thông báo đăng ký môn học', 
+ N'Kỳ đăng ký môn học cho học kỳ 2 năm học 2024-2025 sẽ bắt đầu từ ngày 10/12. Sinh viên vui lòng chuẩn bị danh sách môn học và đăng ký đúng thời hạn.', 
+ N'Phòng đào tạo', 
+ '2024-11-16 11:00:00'),
+
+(N'Cảnh báo an ninh', 
+ N'Hiện tại có một số báo cáo về tình trạng mất cắp trong khuôn viên trường. Vui lòng cẩn thận giữ gìn tài sản cá nhân và báo ngay cho bảo vệ khi cần.', 
+ N'Phòng Hành chính', 
+ '2024-11-15 13:45:00');
+  -- Thêm dữ liệu vào bảng GIANGVIEN để đảm bảo ràng buộc khóa ngoại
+INSERT INTO GIANGVIEN (MaGV, HoTen) VALUES 
+('GV01', N'Nguyễn Văn A'),
+('GV02', N'Lê Thị B'),
+('GV03', N'Trần Văn C');
+
+-- Thêm dữ liệu vào bảng MONHOC để đảm bảo ràng buộc khóa ngoại
+SET IDENTITY_INSERT MONHOC ON;
+
+INSERT INTO MONHOC (MaMH, TenMH, SoTinChi, MaKhoa, SoTinChiLyThuyet, SoTinChiThucHanh) 
+VALUES
+(101, N'Toán cao cấp', 3, 'CNTT', 2, 1),
+(102, N'Lập trình Java', 4, 'CNTT', 3, 1),
+(103, N'Kỹ thuật phần mềm', 3, 'CNTT', 2, 1);
+
+SET IDENTITY_INSERT MONHOC OFF;
+
+
+-- Thêm dữ liệu vào bảng LOPHOCPHAN
+INSERT INTO LOPHOCPHAN (MaLHP, TenLHP, CaHoc, Siso, HK, MaGV, Thu, TietBD, TietKT, DiaDiem, MaMH) 
+VALUES
+('LHP1', N'Lớp Toán 1', 1, 30, 1, 'GV01', '2', 1, 3, N'Phòng A1', 101),
+('LHP2', N'Lớp Lập trình Java', 2, 25, 1, 'GV02', '3', 2, 4, N'Phòng B2', 102),
+('LHP3', N'Lớp Kỹ thuật phần mềm', 3, 20, 2, 'GV03', '4', 3, 5, N'Phòng C3', 103);
+
+>>>>>>> D
 
 

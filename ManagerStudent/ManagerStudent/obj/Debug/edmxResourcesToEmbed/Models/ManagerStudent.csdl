@@ -5,7 +5,7 @@
       <PropertyRef Name="MaAd" />
     </Key>
     <Property Name="MaAd" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="DangKyHoc">
     <Key>
@@ -38,9 +38,9 @@
     <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="GioiTinh" Type="Boolean" />
     <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <Property Name="NgayVaoLam" Type="DateTime" Precision="0" />
     <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -99,6 +99,16 @@
     <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
     <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
   </EntityType>
+  <EntityType Name="NOTIFICATION">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SentTime" Type="DateTime" Precision="3" />
+  </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
       <PropertyRef Name="MaSV" />
@@ -110,9 +120,9 @@
     <Property Name="NienKhoa" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
     <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
     <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MaKhoa" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
     <Property Name="MaKH" Type="Int32" Nullable="false" />
     <Property Name="ID_Status" Type="Int32" Nullable="false" />
@@ -262,7 +272,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ManagerStudentEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ManagerStudentEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ADMIN_ACCOUNT" EntityType="Self.ADMIN_ACCOUNT" />
     <EntitySet Name="DangKyHocs" EntityType="Self.DangKyHoc" />
     <EntitySet Name="Diems" EntityType="Self.Diem" />
@@ -271,6 +281,7 @@
     <EntitySet Name="KHOAHOCs" EntityType="Self.KHOAHOC" />
     <EntitySet Name="LOPHOCPHANs" EntityType="Self.LOPHOCPHAN" />
     <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+    <EntitySet Name="NOTIFICATIONs" EntityType="Self.NOTIFICATION" />
     <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
     <EntitySet Name="TINHTRANGHOCs" EntityType="Self.TINHTRANGHOC" />
     <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">

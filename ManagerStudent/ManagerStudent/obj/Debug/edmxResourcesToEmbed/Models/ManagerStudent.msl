@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ManagerStudentModelStoreContainer" CdmEntityContainer="ManagerStudentEntities">
+  <EntityContainerMapping StorageEntityContainer="ManagerStudentModelStoreContainer" CdmEntityContainer="ManagerStudentEntities1">
     <EntitySetMapping Name="ADMIN_ACCOUNT">
       <EntityTypeMapping TypeName="ManagerStudentModel.ADMIN_ACCOUNT">
         <MappingFragment StoreEntitySet="ADMIN_ACCOUNT">
@@ -88,6 +88,17 @@
           <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
           <ScalarProperty Name="SoTinChiLyThuyet" ColumnName="SoTinChiLyThuyet" />
           <ScalarProperty Name="SoTinChiThucHanh" ColumnName="SoTinChiThucHanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTIFICATIONs">
+      <EntityTypeMapping TypeName="ManagerStudentModel.NOTIFICATION">
+        <MappingFragment StoreEntitySet="NOTIFICATION">
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="SentTime" ColumnName="SentTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
