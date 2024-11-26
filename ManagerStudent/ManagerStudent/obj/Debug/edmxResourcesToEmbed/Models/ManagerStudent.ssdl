@@ -17,14 +17,14 @@
   </EntityType>
   <EntityType Name="Diem">
     <Key>
-      <PropertyRef Name="MaSV" />
-      <PropertyRef Name="MaLHP" />
+      <PropertyRef Name="ID" />
     </Key>
     <Property Name="MaSV" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="MaLHP" Type="char" MaxLength="4" Nullable="false" />
     <Property Name="DiemChuyenCan" Type="int" />
     <Property Name="DiemGiuaKy" Type="int" />
     <Property Name="DiemCuoiKy" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="GIANGVIEN">
     <Key>
@@ -82,6 +82,16 @@
     <Property Name="MaKhoa" Type="char" MaxLength="4" />
     <Property Name="SoTinChiLyThuyet" Type="int" />
     <Property Name="SoTinChiThucHanh" Type="int" />
+  </EntityType>
+  <EntityType Name="NOTIFICATION">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+    <Property Name="SentTime" Type="datetime" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
@@ -249,6 +259,7 @@
     <EntitySet Name="KHOAHOC" EntityType="Self.KHOAHOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOPHOCPHAN" EntityType="Self.LOPHOCPHAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTIFICATION" EntityType="Self.NOTIFICATION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINHTRANGHOC" EntityType="Self.TINHTRANGHOC" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">

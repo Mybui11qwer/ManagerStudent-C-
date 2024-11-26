@@ -33,6 +33,7 @@ namespace ManagerStudent.Models
         public virtual DbSet<KHOAHOC> KHOAHOCs { get; set; }
         public virtual DbSet<LOPHOCPHAN> LOPHOCPHANs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
+        public virtual DbSet<NOTIFICATION> NOTIFICATIONs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
         public virtual DbSet<TINHTRANGHOC> TINHTRANGHOCs { get; set; }
     }

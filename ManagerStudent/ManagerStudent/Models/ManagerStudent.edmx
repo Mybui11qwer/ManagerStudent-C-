@@ -22,14 +22,14 @@
         </EntityType>
         <EntityType Name="Diem">
           <Key>
-            <PropertyRef Name="MaSV" />
-            <PropertyRef Name="MaLHP" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="MaSV" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="MaLHP" Type="char" MaxLength="4" Nullable="false" />
           <Property Name="DiemChuyenCan" Type="int" />
           <Property Name="DiemGiuaKy" Type="int" />
           <Property Name="DiemCuoiKy" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="GIANGVIEN">
           <Key>
@@ -87,6 +87,16 @@
           <Property Name="MaKhoa" Type="char" MaxLength="4" />
           <Property Name="SoTinChiLyThuyet" Type="int" />
           <Property Name="SoTinChiThucHanh" Type="int" />
+        </EntityType>
+        <EntityType Name="NOTIFICATION">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+          <Property Name="SentTime" Type="datetime" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -254,6 +264,7 @@
           <EntitySet Name="KHOAHOC" EntityType="Self.KHOAHOC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOPHOCPHAN" EntityType="Self.LOPHOCPHAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOTIFICATION" EntityType="Self.NOTIFICATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINHTRANGHOC" EntityType="Self.TINHTRANGHOC" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
@@ -325,14 +336,14 @@
         </EntityType>
         <EntityType Name="Diem">
           <Key>
-            <PropertyRef Name="MaSV" />
-            <PropertyRef Name="MaLHP" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="MaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="MaLHP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="DiemChuyenCan" Type="Int32" />
           <Property Name="DiemGiuaKy" Type="Int32" />
           <Property Name="DiemCuoiKy" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="LOPHOCPHAN" Relationship="Self.FK_DK_LHP" FromRole="Diem" ToRole="LOPHOCPHAN" />
           <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_DK_SV" FromRole="Diem" ToRole="SINHVIEN" />
         </EntityType>
@@ -404,6 +415,16 @@
           <Property Name="SoTinChiThucHanh" Type="Int32" />
           <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
           <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
+        </EntityType>
+        <EntityType Name="NOTIFICATION">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SentTime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -577,6 +598,7 @@
           <EntitySet Name="KHOAHOCs" EntityType="Self.KHOAHOC" />
           <EntitySet Name="LOPHOCPHANs" EntityType="Self.LOPHOCPHAN" />
           <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+          <EntitySet Name="NOTIFICATIONs" EntityType="Self.NOTIFICATION" />
           <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
           <EntitySet Name="TINHTRANGHOCs" EntityType="Self.TINHTRANGHOC" />
           <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
@@ -655,6 +677,7 @@
                 <ScalarProperty Name="DiemChuyenCan" ColumnName="DiemChuyenCan" />
                 <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
                 <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -717,6 +740,17 @@
                 <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
                 <ScalarProperty Name="SoTinChiLyThuyet" ColumnName="SoTinChiLyThuyet" />
                 <ScalarProperty Name="SoTinChiThucHanh" ColumnName="SoTinChiThucHanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOTIFICATIONs">
+            <EntityTypeMapping TypeName="ManagerStudentModel.NOTIFICATION">
+              <MappingFragment StoreEntitySet="NOTIFICATION">
+                <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Sender" ColumnName="Sender" />
+                <ScalarProperty Name="SentTime" ColumnName="SentTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

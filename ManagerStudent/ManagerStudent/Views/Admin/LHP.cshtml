@@ -1,0 +1,45 @@
+﻿﻿@model List<ManagerStudent.Models.LOPHOCPHAN>
+
+@{
+    ViewBag.Title = "LHP";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+    <link href="~/Content/UserPage/Function/LHP.css" rel="stylesheet" type="text/css">
+}
+
+
+<h3>Lớp học phần</h3>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã LHP</th>
+            <th>Tên LHP</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.MaLHP</td>
+                <td>@course.TenLHP</td>
+                <td>
+                    @Html.ActionLink("Edit", "EditLHP", "Admin", new { id = course.MaLHP })
+
+                    @using (Html.BeginForm("DeleteLHP", "Admin", new { id = course.MaLHP }, FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="Delete" onclick="return confirm('Xóa hả?')" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>@Html.ActionLink("Add New Course", "AddLHP")</p>

@@ -281,6 +281,10 @@
     <Compile Include="Models\MONHOC.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\NOTIFICATION.cs">
+      <DependentUpon>ManagerStudent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationViewModel.cs" />
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>ManagerStudent.tt</DependentUpon>
     </Compile>
@@ -312,10 +316,12 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Layout\AdminPage.css" />
     <Content Include="Content\UserPage\Function-header.css" />
+    <Content Include="Content\UserPage\Function\AddLHP.css" />
     <Content Include="Content\UserPage\Function\Function-design-index.css" />
     <Content Include="Content\UserPage\Function\index.css" />
     <Content Include="Content\UserPage\Function\Information.css" />
-    <Content Include="Content\UserPage\Function\Notification.css" />
+    <Content Include="Content\UserPage\Function\LHP.css" />
+    <Content Include="Content\UserPage\Function\Notifications.css" />
     <Content Include="Content\UserPage\Function\Program-Edu.css" />
     <Content Include="Content\UserPage\Function\Result.css" />
     <Content Include="Content\UserPage\Function\Schedule.css" />
@@ -390,6 +396,10 @@
     <Content Include="Views\Home\Result.cshtml" />
     <Content Include="Views\GiangVien\Information.cshtml" />
     <Content Include="Views\GiangVien\InputPoint.cshtml" />
+    <Content Include="Views\Admin\LHP.cshtml" />
+    <Content Include="Views\Admin\AddLHP.cshtml" />
+    <Content Include="Views\Admin\EditLHP.cshtml" />
+    <Content Include="Views\Admin\UpdateStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

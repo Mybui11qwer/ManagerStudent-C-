@@ -1,0 +1,92 @@
+﻿﻿ /* General page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #34495e;
+}
+
+/* Title section */
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #000000;
+    font-size: 2rem;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #34495e;
+        color: white;
+        font-weight: bold;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+/* Action button styles */
+input[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #d32f2f;
+    }
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+    a:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+/* Add New Course Link */
+p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+    p a {
+        background-color: #34495e;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+        p a:hover {
+            background-color: #325170;
+        }

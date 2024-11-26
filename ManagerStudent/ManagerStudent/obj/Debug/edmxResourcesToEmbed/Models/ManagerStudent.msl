@@ -26,6 +26,7 @@
           <ScalarProperty Name="DiemChuyenCan" ColumnName="DiemChuyenCan" />
           <ScalarProperty Name="DiemGiuaKy" ColumnName="DiemGiuaKy" />
           <ScalarProperty Name="DiemCuoiKy" ColumnName="DiemCuoiKy" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -88,6 +89,17 @@
           <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
           <ScalarProperty Name="SoTinChiLyThuyet" ColumnName="SoTinChiLyThuyet" />
           <ScalarProperty Name="SoTinChiThucHanh" ColumnName="SoTinChiThucHanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTIFICATIONs">
+      <EntityTypeMapping TypeName="ManagerStudentModel.NOTIFICATION">
+        <MappingFragment StoreEntitySet="NOTIFICATION">
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="SentTime" ColumnName="SentTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

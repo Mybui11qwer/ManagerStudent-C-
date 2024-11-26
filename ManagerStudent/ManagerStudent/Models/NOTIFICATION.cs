@@ -12,16 +12,12 @@ namespace ManagerStudent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Diem
+    public partial class NOTIFICATION
     {
-        public string MaSV { get; set; }
-        public string MaLHP { get; set; }
-        public Nullable<int> DiemChuyenCan { get; set; }
-        public Nullable<int> DiemGiuaKy { get; set; }
-        public Nullable<int> DiemCuoiKy { get; set; }
-        public int ID { get; set; }
-    
-        public virtual LOPHOCPHAN LOPHOCPHAN { get; set; }
-        public virtual SINHVIEN SINHVIEN { get; set; }
+        public int NotificationID { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public string Sender { get; set; }
+        public Nullable<System.DateTime> SentTime { get; set; }
     }
 }

@@ -1,0 +1,61 @@
+.content-form {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+    .content-form .Notification-form {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .content-form .Notification-form .table-title {
+            background-color: burlywood;
+            text-align: center;
+            height: 40px;
+        }
+
+            .content-form .Notification-form .table-title th {
+                padding: 10px;
+                font-size: 1.1em;
+            }
+
+        .content-form .Notification-form .table-content td {
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1em;
+        }
+
+        .content-form .Notification-form .table-content:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .content-form .Notification-form .table-title th,
+        .content-form .Notification-form .table-content td {
+            border: 1px solid black;
+        }
+
+        .content-form .Notification-form .table-title .tilte-notification,
+        .content-form .Notification-form .table-content .content-notification {
+            width: 50%;
+        }
+
+        .content-form .Notification-form .table-title .title-sender,
+        .content-form .Notification-form .table-content .content-sender {
+            width: 25%;
+        }
+
+        .content-form .Notification-form .table-title .tilte-time,
+        .content-form .Notification-form .table-content .content-time {
+            width: 25%;
+        }
+
+        .content-form .Notification-form .table-content {
+            height: 60px;
+        }
+
+            .content-form .Notification-form .table-content td {
+                border: 1px solid #ddd;
+            }

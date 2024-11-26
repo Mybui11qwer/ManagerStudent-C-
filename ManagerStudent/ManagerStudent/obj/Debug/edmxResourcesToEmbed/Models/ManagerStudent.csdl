@@ -19,14 +19,14 @@
   </EntityType>
   <EntityType Name="Diem">
     <Key>
-      <PropertyRef Name="MaSV" />
-      <PropertyRef Name="MaLHP" />
+      <PropertyRef Name="ID" />
     </Key>
     <Property Name="MaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="MaLHP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DiemChuyenCan" Type="Int32" />
     <Property Name="DiemGiuaKy" Type="Int32" />
     <Property Name="DiemCuoiKy" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="LOPHOCPHAN" Relationship="Self.FK_DK_LHP" FromRole="Diem" ToRole="LOPHOCPHAN" />
     <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_DK_SV" FromRole="Diem" ToRole="SINHVIEN" />
   </EntityType>
@@ -98,6 +98,16 @@
     <Property Name="SoTinChiThucHanh" Type="Int32" />
     <NavigationProperty Name="KHOA" Relationship="Self.FK_MH_K" FromRole="MONHOC" ToRole="KHOA" />
     <NavigationProperty Name="LOPHOCPHANs" Relationship="Self.FK_LHP_MH" FromRole="MONHOC" ToRole="LOPHOCPHAN" />
+  </EntityType>
+  <EntityType Name="NOTIFICATION">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SentTime" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>
@@ -271,6 +281,7 @@
     <EntitySet Name="KHOAHOCs" EntityType="Self.KHOAHOC" />
     <EntitySet Name="LOPHOCPHANs" EntityType="Self.LOPHOCPHAN" />
     <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+    <EntitySet Name="NOTIFICATIONs" EntityType="Self.NOTIFICATION" />
     <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
     <EntitySet Name="TINHTRANGHOCs" EntityType="Self.TINHTRANGHOC" />
     <AssociationSet Name="FK_DangKyHoc_LopHocPhan" Association="Self.FK_DangKyHoc_LopHocPhan">
